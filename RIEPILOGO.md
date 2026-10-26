@@ -1,6 +1,6 @@
 # Panì — riepilogo della preview
 
-File: `pani-preview/index.html` (sito) e `pani-preview/gestione.html` (demo per il titolare, non linkata).
+File: `index.html` (sito) e `gestione.html` (demo per il titolare, non linkata).
 
 ## Palette e font
 | Uso | Colore |
