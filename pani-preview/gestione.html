@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  PAGINA DEMO "DIETRO LE QUINTE" PER IL TITOLARE — non è linkata dal sito pubblico.
+  Tutti i dati sono FINTI e servono solo a mostrare cosa vedrà il ristoratore. Nessun backend.
+-->
+<title>Anteprima pannello di gestione — Panì</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3E1120">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233E1120'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%234CBF48'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FBF5EA;--paper:#FFFCF5;--ink:#2A1F1C;--muted:#65524C;--bord:#5B1E31;--bord-d:#3E1120;--green:#1E7B2C;--green-b:#4CBF48;--red:#BF3326;--line:#E4D6BF;--focus:#0B57D0;--fh:'Fredoka',system-ui,sans-serif;--fb:'Nunito',system-ui,sans-serif}
+[hidden]{display:none!important}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip}
+body{margin:0;font:17px/1.55 var(--fb);color:var(--ink);background:var(--cream);overflow-x:clip}
+h1,h2,h3{font-family:var(--fh);line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(1.6rem,5.5vw,2.4rem)} h2{font-size:1.5rem} h3{font-size:1.1rem}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.top{background:var(--bord-d);color:#fff;padding:18px 0}
+.top .m{font-family:var(--fh);font-weight:700;font-size:1.5rem;color:#E9E5DF} .top .m b{color:var(--green-b)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.demo{background:#FFF1C9;color:#4B3A00;border-left:5px solid #C9A227;padding:12px 16px;margin:18px 0;border-radius:8px;font-weight:700}
+section{margin:30px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.st{display:inline-block;font:800 .75rem var(--fb);padding:3px 10px;border-radius:999px;margin:0 4px 4px 0;white-space:nowrap}
+.s-ok{background:#D6F0D8;color:#0E4A18} .s-rem{background:#DCE8FF;color:#123A82} .s-dep{background:#FFE3B8;color:#6B3A00} .s-new{background:#F9D5D0;color:#7A1C12} .s-pre{background:#EEE4F5;color:#43225F}
+.fake{font-style:italic;color:#7A6A63}
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tab{min-height:44px;padding:.3em 1.1em;border-radius:999px;border:2px solid var(--bord);background:#fff;color:var(--bord);font:700 1rem var(--fb);cursor:pointer}
+.tab[aria-selected=true]{background:var(--bord);color:#fff}
+.bubble{background:#DCF8C6;color:#102A0E;border-radius:14px 14px 4px 14px;padding:12px 14px;white-space:pre-line;max-width:520px}
+.bubble.sms{background:#E5E5EA;color:#111;border-radius:14px 14px 14px 4px}
+.bubble.mail{background:#fff;border:1px solid #CFC4B5;color:#222;border-radius:8px}
+.ph-note{display:inline-block;background:#FFF1C9;color:#4B3A00;border:1px dashed #C9A227;border-radius:6px;padding:0 6px;font-size:.92em;font-weight:600}
+pre.code{background:#221B1A;color:#F4EFE6;border-radius:12px;padding:14px;overflow-x:auto;font:.85rem/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word}
+pre.code mark{background:#4CBF48;color:#102A0E;padding:0 3px;border-radius:3px}
+.cols{display:grid;gap:18px}
+@media(min-width:800px){.cols{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:800;margin:10px 0 4px}
+input[type=text],input[type=number]{width:100%;min-height:46px;border:2px solid #A8978A;border-radius:12px;padding:.5em .8em;font:inherit}
+.it{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--paper)}
+.it .h{display:flex;justify-content:space-between;gap:10px;font-family:var(--fh);font-weight:600}
+a{color:var(--bord)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="m">PA<b>NÍ</b></span> <span style="opacity:.8">· pannello del titolare</span></div></header>
+<main class="wrap">
+  <h1>Anteprima pannello di gestione — dati di esempio</h1>
+  <div class="demo">Pagina dimostrativa: nomi, telefoni e importi sono finti. Serve a mostrare cosa vedrà il titolare quando il sito sarà attivo.</div>
+
+  <section aria-labelledby="h-pren">
+    <h2 id="h-pren">Prenotazioni di oggi <small class="fake" id="today"></small></h2>
+    <div class="card scroll">
+      <table>
+        <thead><tr><th>Ora</th><th>Cliente</th><th>Persone</th><th>Stato</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>12:30</td><td>Cliente Esempio 1<br><span class="fake">+39 3XX XXX XXXX</span></td><td>2</td><td><span class="st s-ok">Confermata</span><span class="st s-rem">Promemoria inviato</span></td><td class="fake">Tavolo all'aperto</td></tr>
+          <tr><td>13:00</td><td>Cliente Esempio 2<br><span class="fake">+39 3XX XXX XXXX</span></td><td>4</td><td><span class="st s-ok">Confermata</span></td><td class="fake">Seggiolone</td></tr>
+          <tr><td>20:00</td><td>Cliente Esempio 3<br><span class="fake">+39 3XX XXX XXXX</span></td><td>10</td><td><span class="st s-ok">Confermata</span><span class="st s-dep">Caparra: carta a garanzia</span><span class="st s-rem">Promemoria inviato</span></td><td class="fake">Tavolo da 8+ → garanzia richiesta</td></tr>
+          <tr><td>20:30</td><td>Cliente Esempio 4<br><span class="fake">+39 3XX XXX XXXX</span></td><td>2</td><td><span class="st s-new">Da confermare</span></td><td class="fake">Allergia: [esempio]</td></tr>
+        </tbody>
+      </table>
+      <p class="fake" style="margin:10px 0 0">I promemoria partono in automatico: <span class="ph-note">[24 ore / 3 ore prima — da decidere]</span>. Importo caparra: <span class="ph-note">[€ per persona — da decidere]</span>.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-ord">
+    <h2 id="h-ord">Ordini di asporto in arrivo</h2>
+    <div class="card scroll">
+      <table>
+        <thead><tr><th>N°</th><th>Ritiro</th><th>Cliente</th><th>Ordine</th><th>Pagamento</th></tr></thead>
+        <tbody>
+          <tr><td>PN-0001</td><td>12:45</td><td>Cliente Esempio A</td><td>2 × Firenze, 1 × Panì <span class="fake">(esempio)</span></td><td><span class="st s-ok">Pagato online (simulato)</span></td></tr>
+          <tr><td>PN-0002</td><td>13:15</td><td>Cliente Esempio B</td><td>1 × Shanghai <span class="fake">(esempio)</span></td><td><span class="st s-dep">Paga al ritiro</span></td></tr>
+          <tr><td>PN-0003</td><td>13:30</td><td>Cliente Esempio C</td><td>3 × Roma <span class="fake">(esempio)</span></td><td><span class="st s-ok">Pagato online (simulato)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-ev">
+    <h2 id="h-ev">Richieste eventi e gruppi</h2>
+    <div class="card scroll">
+      <table>
+        <thead><tr><th>Evento</th><th>Data</th><th>Persone</th><th>Richiesta</th><th>Stato</th></tr></thead>
+        <tbody>
+          <tr><td>Compleanno</td><td>[data di esempio]</td><td>25</td><td class="fake">Aperitivo a buffet, uso esclusivo del dehors <span class="ph-note">[disponibilità da confermare]</span></td><td><span class="st s-new">Da richiamare</span></td></tr>
+          <tr><td>Cena aziendale</td><td>[data di esempio]</td><td>14</td><td class="fake">Menù fisso, esigenze alimentari: [esempio]</td><td><span class="st s-pre">Proposta inviata</span></td></tr>
+        </tbody>
+      </table>
+      <p class="fake" style="margin:10px 0 0">Il cliente riceve “Ti ricontattiamo entro [24 ore]”.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-rev">
+    <h2 id="h-rev">Richiesta di recensione automatica</h2>
+    <p>Il giorno dopo, a chi ha prenotato arriva un messaggio gentile con il link per lasciare una recensione. Orario di invio: <span class="ph-note">[orario da decidere]</span>. Link: <span class="ph-note">[Link scheda Google]</span>.</p>
+    <div class="card">
+      <div class="tabs" role="tablist" aria-label="Canale del messaggio">
+        <button class="tab" role="tab" type="button" id="t-wa" aria-selected="true" aria-controls="rv" data-k="wa">WhatsApp</button>
+        <button class="tab" role="tab" type="button" id="t-sms" aria-selected="false" aria-controls="rv" data-k="sms" tabindex="-1">SMS</button>
+        <button class="tab" role="tab" type="button" id="t-mail" aria-selected="false" aria-controls="rv" data-k="mail" tabindex="-1">Email</button>
+      </div>
+      <div id="rv" role="tabpanel" aria-labelledby="t-wa"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-menu">
+    <h2 id="h-menu">Come si modifica un piatto del menù</h2>
+    <p>Ogni piatto è <strong>una riga</strong> nell'elenco del menù. Cambi il prezzo o il nome e il sito si aggiorna da solo (menù, ordini e dati per Google). Prova qui: modifica i campi e guarda riga e risultato.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>1 · La riga del menù</h3>
+        <pre class="code" id="line" aria-live="polite"></pre>
+        <label for="ed-n">Nome del piatto</label><input id="ed-n" type="text" value="Firenze">
+        <label for="ed-p">Prezzo (€)</label><input id="ed-p" type="number" step="0.1" min="0" value="6.5">
+        <p class="fake" style="margin-bottom:0">Per togliere un piatto dal sito basta cancellare la sua riga.</p>
+      </div>
+      <div class="card">
+        <h3>2 · Il risultato sul sito</h3>
+        <article class="it"><div class="h"><span id="r-n">Firenze</span><span id="r-p">6,50 €</span></div>
+          <p style="margin:6px 0 0;color:#4A3B36;font-size:.95rem">Prosciutto cotto di Praga, mozzarella, pomodoro, rucola, olio extravergine d'oliva</p></article>
+        <p class="fake">Esempio dimostrativo: il prezzo qui è inventato per la prova, non è quello del locale.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="wrap" style="padding-bottom:40px"><p class="fake">Anteprima — funzioni dimostrative. Nessun dato viene salvato o inviato.</p></footer>
+
+<script>
+'use strict';
+const $ = s => document.querySelector(s);
+// data di oggi (formato italiano)
+$('#today').textContent = '· ' + new Intl.DateTimeFormat('it-IT', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
+
+// anteprima messaggio di richiesta recensione (testi da approvare con il locale)
+const REV = {
+  wa:   { cls: '',     txt: "Ciao Cliente Esempio! Grazie per essere stato da Panì ieri: speriamo ti sia piaciuto. Se ti va, una tua recensione ci aiuta tanto: [Link scheda Google]\nA presto, lo staff di Panì" },
+  sms:  { cls: 'sms',  txt: "Panì: grazie per la visita di ieri! Ti è piaciuto? Lascia una recensione qui: [Link scheda Google]" },
+  mail: { cls: 'mail', txt: "Oggetto: Com'è andata da Panì?\n\nCiao Cliente Esempio,\ngrazie per essere passato da noi ieri. La tua opinione ci aiuta a migliorare e a farci conoscere: lasciaci una recensione qui [Link scheda Google].\n\nA presto,\nlo staff di Panì" }
+};
+const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+function showRev(k) {
+  document.querySelectorAll('.tab').forEach(b => { const on = b.dataset.k === k; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; });
+  $('#rv').setAttribute('aria-labelledby', 't-' + k);
+  $('#rv').innerHTML = `<div class="bubble ${REV[k].cls}">${esc(REV[k].txt).replace(/\[[^\]]+\]/g, m => '<span class="ph-note">' + m + '</span>')}</div>`;
+}
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => showRev(b.dataset.k)));
+showRev('wa');
+
+// editor dimostrativo del piatto
+function draw() {
+  const n = $('#ed-n').value || 'Nome', p = parseFloat($('#ed-p').value);
+  const price = isNaN(p) ? '—' : p.toFixed(2);
+  $('#line').innerHTML = `{ id: 'firenze', n: '<mark>${esc(n)}</mark>', d: ['Prosciutto cotto di Praga, mozzarella, pomodoro, rucola, olio extravergine d\\'oliva', '…'], p: <mark>${price}</mark>, t: [], a: null },`;
+  $('#r-n').textContent = n; $('#r-p').textContent = isNaN(p) ? '—' : new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(p);
+}
+['#ed-n', '#ed-p'].forEach(s => $(s).addEventListener('input', draw)); draw();
+</script>
+</body>
+</html>

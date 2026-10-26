@@ -1,0 +1,1678 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  PREVIEW — bozza per il titolare. Non è il sito definitivo.
+  Tutto ciò che non conosciamo è tra [parentesi quadre] ed è visibile nella pagina.
+  Funzioni (prenotazione, ordini, pagamenti, invii) SIMULATE: nessun backend, nessun pagamento reale.
+
+  NOME DEL LOCALE — DA CONFERMARE: su Google Maps "Panì Restaurant", su TripAdvisor "Pani Genuine Food",
+  sull'insegna "PANÍ genuine food". Qui: marchio "Panì", sottotitolo "Genuine Food". La dicitura ufficiale va confermata.
+-->
+<title>Panì Genuine Food — Panini, burger, fritti e birra | Viale America, EUR, Roma</title>
+<!-- La meta description è mostrata in IT; lo script la sostituisce con la versione EN quando si cambia lingua. -->
+<meta name="description" content="Panì Genuine Food, paninoteca gourmet e hamburgeria con birreria all'EUR, Roma. Panini, burger, fritti, aperitivo e cena in Viale America 13, a due passi dal Laghetto. Prenota o ordina da ritirare.">
+<meta name="description-en" content="Panì Genuine Food: gourmet sandwich shop, burgers and craft-style beer bar in EUR, Rome. Sandwiches, burgers, fried bites, aperitivo and dinner at Viale America 13, a short walk from the EUR lake. Book a table or order for pickup.">
+<meta name="theme-color" content="#3E1120">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:site_name" content="Panì Genuine Food">
+<meta property="og:title" content="Panì Genuine Food — Panini, burger, fritti e birra all'EUR">
+<meta property="og:description" content="Panini, burger, fritti e birra davanti al Laghetto dell'EUR. Prenota un tavolo o ordina da ritirare.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<!-- [Immagine Open Graph — foto del locale da fornire] -->
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex, nofollow"><!-- solo anteprima: togliere alla pubblicazione -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233E1120'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%234CBF48'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Panì Genuine Food",
+  "alternateName": ["Panì Restaurant", "Pani Genuine Food"],
+  "description": "Paninoteca gourmet e hamburgeria con birreria, bar e gastronomia all'EUR, Roma.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Viale America 13",
+    "postalCode": "00144",
+    "addressLocality": "Roma",
+    "addressRegion": "RM",
+    "addressCountry": "IT"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 41.8316541, "longitude": 12.4619294 },
+  "telephone": "+393471172963",
+  "servesCuisine": ["Panini", "Hamburger", "Birreria", "Italiana"],
+  "priceRange": "€",
+  "acceptsReservations": true,
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "11:30", "closes": "23:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "17:00", "closes": "23:30" }
+  ],
+  "hasMenu": { "@id": "#menu-jsonld" }
+}
+</script>
+
+<style>
+:root{
+  --cream:#FBF5EA; --paper:#FFFCF5; --ink:#2A1F1C; --muted:#65524C;
+  --bord:#5B1E31; --bord-d:#3E1120; --green:#1E7B2C; --green-b:#4CBF48;
+  --red:#BF3326; --red-d:#962619; --wood:#D9B27C; --chalk:#221B1A; --line:#E4D6BF;
+  --focus:#0B57D0; --r:16px; --shadow:0 10px 28px rgba(62,17,32,.14);
+  --fh:'Fredoka',system-ui,'Segoe UI',sans-serif; --fb:'Nunito',system-ui,'Segoe UI',sans-serif; --fc:'Caveat','Segoe Script',cursive;
+  --dock:68px;
+}
+[hidden]{display:none!important}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;font-family:var(--fb);font-size:17px;line-height:1.55;color:var(--ink);background:var(--cream);padding-bottom:calc(var(--dock) + 12px);overflow-x:clip}
+img,svg{max-width:100%}
+h1,h2,h3,h4{font-family:var(--fh);line-height:1.12;margin:0 0 .5em;font-weight:600;letter-spacing:.005em}
+h1{font-size:clamp(2.2rem,8vw,4rem)}
+h2{font-size:clamp(1.7rem,5.4vw,2.6rem)}
+h3{font-size:1.25rem}
+p{margin:0 0 1em}
+a{color:var(--bord);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.dark :focus-visible,.hdr :focus-visible,.dock :focus-visible{outline-color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:#fff;color:#000;padding:10px 14px;z-index:100;border-radius:8px}
+.skip:focus{top:8px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+section{padding:52px 0}
+.alt{background:var(--paper)}
+.dark{background:var(--chalk);color:#F4EFE6}
+.dark a{color:#fff}
+.dark a.btn-light{color:var(--bord-d)}
+.dark .muted,.bord .muted{color:#D8CABF}
+.bord{background:var(--bord);color:#fff}
+.lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+.dark .lead,.bord .lead{color:#E7DBD0}
+.kicker{font-family:var(--fc);font-size:1.5rem;color:var(--green);margin:0 0 .1em;line-height:1}
+.dark .kicker{color:var(--green-b)} .bord .kicker{color:#F2C98A}
+.muted{color:var(--muted)}
+.ph-note{display:inline-block;background:#FFF1C9;color:#4B3A00;border:1px dashed #C9A227;border-radius:6px;padding:0 6px;font-size:.92em;font-weight:600}
+.dark .ph-note,.bord .ph-note{background:#4B3F10;color:#FFF1C9;border-color:#C9A227}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.65em 1.3em;border-radius:999px;border:2px solid transparent;font:700 1rem var(--fb);text-decoration:none;cursor:pointer;transition:transform .15s,background .15s;text-align:center}
+.btn:hover{transform:translateY(-1px)}
+.btn-red{background:var(--red);color:#fff} .btn-red:hover{background:var(--red-d)}
+.btn-green{background:var(--green);color:#fff}
+.btn-ghost{background:transparent;border-color:currentColor;color:inherit}
+.btn-light{background:#fff;color:var(--bord-d)}
+.btn-sm{min-height:40px;padding:.4em 1em;font-size:.95rem}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--bord-d);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.hdr .wrap{display:flex;align-items:center;gap:10px;min-height:64px}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:#fff;margin-right:auto}
+.logo-m{font-family:var(--fh);font-weight:700;font-size:1.85rem;letter-spacing:.03em;color:#E9E5DF;text-shadow:1px 2px 0 rgba(255,255,255,.18)}
+.logo-m b{color:var(--green-b);font-weight:700}
+.logo-s{font-family:var(--fh);font-weight:500;font-size:.8rem;color:#CFC5BC;margin-top:1px;letter-spacing:.02em}
+.logo-s b{color:var(--green-b);font-weight:600}
+.nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bord-d);padding:8px 16px 16px;border-top:1px solid rgba(255,255,255,.12)}
+.nav.open{display:block}
+.nav a{display:block;padding:12px 4px;color:#fff;text-decoration:none;font-weight:700;border-bottom:1px solid rgba(255,255,255,.1)}
+.nav a:hover{color:var(--green-b)}
+.lang{display:flex;border:2px solid rgba(255,255,255,.4);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:#fff;font:800 .85rem var(--fb);padding:7px 11px;cursor:pointer;min-height:36px}
+.lang button[aria-pressed=true]{background:#fff;color:var(--bord-d)}
+.burger{background:none;border:2px solid rgba(255,255,255,.4);color:#fff;border-radius:10px;width:44px;height:40px;cursor:pointer;display:grid;place-items:center}
+.hdr-book{display:none}
+@media(min-width:960px){
+  .burger{display:none}
+  .nav{display:flex;position:static;padding:0;border:0;background:none;gap:2px;margin:0 6px}
+  .nav a{border:0;padding:8px 9px;font-size:.95rem}
+  .hdr-book{display:inline-flex}
+  .logo{margin-right:12px}
+  .hdr .wrap{gap:6px}
+  .hdr .nav{margin-left:auto}
+}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--bord-d),var(--bord) 70%);color:#fff;padding:36px 0 52px;position:relative}
+.hero .wrap{display:grid;gap:28px}
+.hero h1{margin-bottom:.3em}
+.hero h1 em{font-style:normal;color:#F2C98A}
+.hero .lead{color:#EBDDD2}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 18px}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.95rem}
+.dot{width:10px;height:10px;border-radius:50%;background:#aaa}
+.status.on .dot{background:var(--green-b);box-shadow:0 0 0 4px rgba(76,191,72,.3)}
+.status.off .dot{background:#F2A097}
+.rate{margin-top:14px;font-size:.95rem;color:#EBDDD2}
+.rate strong{color:#fff}
+@media(min-width:900px){.hero{padding:64px 0 76px}.hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;gap:48px}}
+
+/* photo placeholders */
+.ph{margin:0;aspect-ratio:var(--ar,4/3);border-radius:var(--r);border:2px dashed #B79A6A;display:grid;place-items:center;text-align:center;padding:16px;color:#4B3A22;font-weight:700;font-size:.95rem;
+  background:repeating-linear-gradient(135deg,#F3E7CF 0 14px,#EEDFC1 14px 28px);position:relative;overflow:hidden}
+.ph::before{content:"";position:absolute;inset:auto auto 10px 12px;width:26px;height:20px;border:2px solid currentColor;border-radius:4px;opacity:.35}
+.ph span{max-width:30ch}
+.dark .ph,.bord .ph{border-color:rgba(255,255,255,.4);color:#F4E8D6;background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 14px,rgba(255,255,255,.12) 14px 28px)}
+
+/* cards & grid */
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:1fr}
+@media(min-width:760px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 2px 0 var(--line)}
+.dark .card{background:#2D2423;border-color:#4A3C3A;box-shadow:none}
+.moment h3{display:flex;align-items:center;gap:10px}
+.moment .tag{font-family:var(--fc);font-size:1.4rem;color:var(--green)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:18px 0 0;padding:0}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.92rem}
+.dark .chips li{background:#2D2423;border-color:#4A3C3A}
+
+/* menu */
+.mfilters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0 10px}
+.tog{min-height:44px;border:2px solid #7C6A60;background:#fff;color:var(--ink);border-radius:999px;padding:.35em 1em;font:700 .95rem var(--fb);cursor:pointer}
+.tog[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}
+.mfilters label{font-weight:700;display:flex;align-items:center;gap:8px}
+select,input,textarea{font:inherit;color:var(--ink)}
+select,input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],textarea{width:100%;min-height:48px;border:2px solid #A8978A;border-radius:12px;padding:.55em .8em;background:#fff}
+textarea{min-height:92px;resize:vertical}
+.mfilters select{width:auto;min-height:44px;padding:.3em .7em}
+.warn{background:#FFF1C9;color:#4B3A00;border-left:5px solid #C9A227;border-radius:8px;padding:12px 14px;margin:10px 0;font-weight:600}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:6px 2px 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;margin:0 -2px}
+.tab{flex:none;scroll-snap-align:start;min-height:46px;padding:.4em 1.1em;border-radius:999px;border:2px solid var(--bord);background:#fff;color:var(--bord);font:700 1rem var(--fb);cursor:pointer;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--bord);color:#fff}
+.botm{background:var(--chalk);color:#F4EFE6;border-radius:var(--r);padding:20px 22px;margin:14px 0;border:3px solid #E9DFCE;position:relative}
+.botm .kicker{color:var(--green-b);font-size:1.7rem}
+.botm h3{color:#fff;margin:0 0 .2em;font-family:var(--fc);font-size:2rem;font-weight:600}
+.items{display:grid;gap:14px;grid-template-columns:1fr;margin-top:12px}
+@media(min-width:760px){.items{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.items{grid-template-columns:repeat(3,1fr)}}
+.it{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.it-h{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.it h4{font-size:1.12rem;margin:0}
+.hero .kicker{color:#F2C98A}
+.oprice{display:block;font-weight:800;margin-top:2px}
+.it h4 .ph-note{font-size:.8em;font-weight:600;font-family:var(--fb)}
+.price{font-family:var(--fh);font-weight:600;color:var(--bord);white-space:nowrap}
+.it p{margin:0;font-size:.95rem;color:#4A3B36}
+.tourist{font-style:italic;border-left:3px solid var(--wood);padding-left:10px}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.bd{font:800 .72rem var(--fb);padding:2px 8px;border-radius:6px;background:var(--green);color:#fff;letter-spacing:.04em}
+.bd.sg{background:#7A5A00}.bd.vg{background:#14591F}
+.allg{display:flex;gap:4px;flex-wrap:wrap;align-items:center;font-size:.85rem}
+.allg span[title]{background:#F3E9D8;border-radius:6px;padding:1px 6px}
+.it-f{margin-top:auto;padding-top:8px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;flex-wrap:wrap}
+.legend{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 16px}
+.legend summary{font-weight:800;cursor:pointer;min-height:40px;display:flex;align-items:center}
+.legend ul{list-style:none;padding:0;margin:8px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px 14px;font-size:.92rem}
+.empty{padding:20px;text-align:center;color:var(--muted)}
+
+/* forms */
+.form{display:grid;gap:14px}
+.row2{display:grid;gap:14px}
+@media(min-width:620px){.row2{grid-template-columns:1fr 1fr}.row3{grid-template-columns:repeat(3,1fr)}}
+.fld label,.fld legend{display:block;font-weight:800;margin-bottom:5px;font-size:.96rem}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:inline-flex;align-items:center;min-height:46px;padding:.3em 1em;border:2px solid #A8978A;border-radius:999px;background:#fff;font-weight:700}
+.opt input:checked+span{background:var(--bord);border-color:var(--bord);color:#fff}
+.opt input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.dark .opt input:focus-visible+span{outline-color:#fff}
+.hint{font-size:.9rem;color:var(--muted);margin-top:4px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);color:var(--ink)}
+.panel h3{margin-top:0}
+.steps{display:flex;gap:6px;list-style:none;margin:0 0 16px;padding:0;font-weight:800;font-size:.85rem;flex-wrap:wrap}
+.steps li{padding:4px 12px;border-radius:999px;background:#EFE4D0;color:#4B3A33}
+.steps li[aria-current=step]{background:var(--bord);color:#fff}
+.fake{background:#F6F0E6;border:2px dashed #A8978A;border-radius:12px;padding:14px}
+.err{color:#A3190C;font-weight:700;font-size:.9rem;min-height:1.2em}
+.bubble{background:#DCF8C6;color:#102A0E;border-radius:14px 14px 4px 14px;padding:12px 14px;font-size:.95rem;margin:6px 0 10px;white-space:pre-line}
+.bubble.sms{background:#E5E5EA;color:#111;border-radius:14px 14px 14px 4px}
+.bubble.mail{background:#fff;border:1px solid #CFC4B5;color:#222;border-radius:8px}
+.chan{font:800 .75rem var(--fb);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.okmark{width:54px;height:54px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:1.8rem;margin-bottom:10px}
+.save{font-size:.92rem;margin-top:8px}
+
+/* order */
+.ordgrid{display:grid;gap:22px;margin-top:20px}
+@media(min-width:900px){.ordgrid{grid-template-columns:1.15fr .85fr;align-items:start}.cart{position:sticky;top:84px}}
+.ogroup h4{margin:16px 0 6px;font-size:1rem;color:#fff;border-bottom:1px solid #4A3C3A;padding-bottom:4px}
+.orow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #3A2F2D}
+.orow{flex-wrap:wrap}
+.orow>div:first-child{flex:1 1 190px;min-width:0}
+.orow .qty{margin-left:auto}
+.orow small{display:block;color:#CDBFB4}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:40px;height:40px;border-radius:50%;border:2px solid currentColor;background:none;color:inherit;font:800 1.2rem var(--fb);cursor:pointer}
+.cart .panel{background:#fff}
+.cline{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--line)}
+.total{display:flex;justify-content:space-between;font:600 1.3rem var(--fh);padding:12px 0}
+
+/* gift voucher */
+.vgrid{display:grid;gap:24px;margin-top:20px;grid-template-columns:minmax(0,1fr)}
+.vgrid>*{min-width:0}
+@media(min-width:900px){.vgrid{grid-template-columns:1fr 1fr;align-items:start}}
+.voucher{position:relative;min-height:250px;width:100%;border-radius:20px;color:#fff;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;
+  background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.14),transparent 45%),linear-gradient(145deg,var(--bord),var(--bord-d));box-shadow:var(--shadow);border:3px dashed rgba(255,255,255,.45);outline:6px solid var(--bord-d)}
+.voucher .vm{font-family:var(--fh);font-weight:700;font-size:1.8rem;letter-spacing:.04em;line-height:1}
+.voucher .vm b{color:var(--green-b)}
+.voucher .va{font-family:var(--fh);font-size:clamp(2.6rem,10vw,3.6rem);font-weight:700;line-height:1}
+.voucher .vmsg{font-family:var(--fc);font-size:1.5rem;line-height:1.1;min-height:1.1em}
+.voucher small{opacity:.9;display:block}
+.vcode{font:800 1.05rem ui-monospace,Menlo,Consolas,monospace;letter-spacing:.12em;background:rgba(255,255,255,.14);padding:3px 10px;border-radius:8px;display:inline-block}
+.xmas{display:none;background:linear-gradient(90deg,#14591F,#962619);color:#fff;text-align:center;font-weight:800;padding:10px 16px;border-radius:12px;margin:0 0 20px}
+.xmas.on{display:block}
+.amounts{display:flex;gap:8px;flex-wrap:wrap}
+
+/* about / gallery / reviews / where */
+.about{display:grid;gap:28px}
+@media(min-width:900px){.about{grid-template-columns:1fr 1fr;align-items:center}}
+.gal{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(min-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+.stars{color:#B56B00;font-size:1.1rem;letter-spacing:2px}
+.rbig{font:700 3rem var(--fh);color:var(--bord);line-height:1}
+.where{display:grid;gap:24px}
+@media(min-width:900px){.where{grid-template-columns:1fr 1.1fr}}
+.map{width:100%;aspect-ratio:4/3;border:0;border-radius:var(--r);background:#E9E1D2}
+table.hours{border-collapse:collapse;width:100%;max-width:420px}
+.hours th,.hours td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+.hours tr.today{background:#FFF1C9;font-weight:800}
+.dark .hours th,.dark .hours td{border-color:#4A3C3A}
+.dark .hours tr.today{background:#4B3F10;color:#FFF1C9}
+
+/* footer */
+.foot{background:var(--bord-d);color:#EBDDD2;padding:40px 0 20px;font-size:.95rem}
+.foot a{color:#fff}
+.foot-g{display:grid;gap:26px}
+@media(min-width:800px){.foot-g{grid-template-columns:1.2fr 1fr 1fr 1fr}}
+.foot h3{font-size:1.05rem;color:#fff}
+.demo-badge{display:inline-block;margin-top:22px;font-size:.8rem;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 14px;color:#EBDDD2}
+
+/* dock */
+.dock{position:fixed;z-index:60;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);background:var(--bord-d);box-shadow:0 -4px 18px rgba(0,0,0,.3);padding-bottom:env(safe-area-inset-bottom)}
+.dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#fff;text-decoration:none;font:800 .76rem var(--fb);min-height:var(--dock);padding:6px 2px}
+.dock a.main{background:var(--red)}
+.dock a:hover{background:rgba(255,255,255,.1)} .dock a.main:hover{background:var(--red-d)}
+@media(min-width:900px){
+  body{padding-bottom:0}
+  .dock{left:auto;right:18px;bottom:18px;grid-template-columns:repeat(4,auto);border-radius:999px;overflow:hidden;padding:0}
+  .dock a{flex-direction:row;gap:7px;min-height:48px;padding:0 16px;font-size:.88rem}
+}
+@media(max-width:380px){.dock a{font-size:.7rem}}
+
+/* cookie + toast */
+.cookie{position:fixed;z-index:70;left:10px;right:10px;bottom:calc(var(--dock) + 10px);background:#fff;border:2px solid var(--bord);border-radius:14px;padding:14px;box-shadow:var(--shadow);font-size:.9rem;display:none}
+.cookie.on{display:block}
+.cookie .cta-row{margin:10px 0 0}
+@media(min-width:900px){.cookie{right:auto;left:18px;bottom:18px;max-width:430px}}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--dock) + 22px);background:#222;color:#fff;border-radius:10px;padding:10px 16px;z-index:80;font-weight:700;max-width:92vw;display:none}
+.toast.on{display:block}
+@media(min-width:900px){.toast{bottom:84px}}
+
+@media print{
+  body.print-voucher>*:not(main){display:none!important}
+  body.print-voucher main>*:not(#regali){display:none!important}
+  body.print-voucher #regali .vgrid>*:not(.vprev){display:none!important}
+  body.print-voucher #regali .wrap>*:not(.vgrid){display:none!important}
+  body.print-voucher .dock,body.print-voucher .cookie{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+
+<a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
+
+<header class="hdr">
+  <div class="wrap">
+    <!-- [Logo di Panì — inviare file vettoriale]: wordmark ricreato dall'insegna (PA bianco/grigio, NÍ verde, "genuine food"). Approssimato. -->
+    <a class="logo" href="#top" aria-label="Panì Genuine Food">
+      <span class="logo-m" aria-hidden="true">PA<b>NÍ</b></span>
+      <span class="logo-s" aria-hidden="true">genuine <b>food</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu principale" data-i18n-aria="nav.label">
+      <a href="#menu" data-i18n="nav.menu">Menù</a>
+      <a href="#ordina" data-i18n="nav.order">Ordina</a>
+      <a href="#prenota" data-i18n="nav.book">Prenota</a>
+      <a href="#eventi" data-i18n="nav.events">Eventi</a>
+      <a href="#regali" data-i18n="nav.gift">Buoni regalo</a>
+      <a href="#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+      <a href="#dove" data-i18n="nav.where">Dove siamo</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Lingua / Language">
+      <button type="button" data-lang="it" aria-pressed="true" lang="it">IT</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <a class="btn btn-red btn-sm hdr-book" href="#prenota" data-i18n="hdr.book">Prenota</a>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu" data-i18n-aria="nav.toggle"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-i18n="hero.kicker">Paninoteca gourmet · hamburgeria · birreria</p>
+      <h1 data-i18n-html="hero.title">Panini, burger e fritti. <em>Genuini, come a casa.</em></h1>
+      <p class="lead" data-i18n="hero.sub">Panini, burger, fritti e birra davanti al Laghetto dell'EUR. Per la pausa pranzo, l'aperitivo e la cena, fino a tardi.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="#prenota" data-i18n="hero.cta1">Prenota un tavolo</a>
+        <a class="btn btn-light" href="#ordina" data-i18n="hero.cta2">Ordina da ritirare</a>
+      </div>
+      <div class="status" id="openStatus" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="openText">…</span></div>
+      <p class="rate"><strong>4,3/5</strong> <span data-i18n="hero.rate">su TripAdvisor · circa 410 recensioni</span> · <span class="ph-note" data-i18n="hero.google">[Voto Google e numero recensioni]</span></p>
+    </div>
+    <figure class="ph" style="--ar:4/3" role="img" aria-label="Panino gourmet tagliato a metà in primo piano, sullo sfondo il bancone sfocato, luce calda" data-i18n-aria="ph.hero.alt">
+      <span data-i18n="ph.hero">[Foto: panino gourmet tagliato a metà in primo piano, sfondo sfocato del bancone, luce calda]</span>
+    </figure>
+  </div>
+</section>
+
+<!-- TRE MOMENTI -->
+<section class="alt" id="momenti">
+  <div class="wrap">
+    <p class="kicker" data-i18n="mo.kicker">Un solo posto</p>
+    <h2 data-i18n="mo.title">Tre momenti per stare bene da Panì</h2>
+    <div class="grid g3">
+      <article class="card moment">
+        <h3><span class="tag" aria-hidden="true">1</span> <span data-i18n="mo.lunch.t">Pausa pranzo</span></h3>
+        <p data-i18n="mo.lunch.p">Panini, burger e fritti per staccare dall'ufficio: al tavolo, all'aperto o da portare via e mangiare sul prato davanti al lago. Fascia di prezzo €.</p>
+        <p><strong data-i18n="mo.lunch.water">Acqua omaggio per chi lavora negli uffici dell'EUR, dal lunedì al venerdì.</strong> <span class="ph-note" data-i18n="mo.lunch.cond">[Condizioni da confermare]</span></p>
+        <a href="#ordina" data-i18n="mo.lunch.cta">Ordina da ritirare →</a>
+      </article>
+      <article class="card moment">
+        <h3><span class="tag" aria-hidden="true">2</span> <span data-i18n="mo.aperi.t">Aperitivo</span></h3>
+        <p data-i18n="mo.aperi.p">Birra alla spina, tagliere di salumi e formaggi e fritti croccanti: l'aperitivo e l'apericena sono tra le cose più apprezzate dai nostri ospiti.</p>
+        <p><span class="ph-note" data-i18n="mo.aperi.cond">[Orari e formula dell'aperitivo da confermare]</span></p>
+        <a href="#menu" data-i18n="mo.aperi.cta">Guarda il menù →</a>
+      </article>
+      <article class="card moment">
+        <h3><span class="tag" aria-hidden="true">3</span> <span data-i18n="mo.dinner.t">Cena</span></h3>
+        <p data-i18n="mo.dinner.p">Una cena informale e golosa, con il servizio al tavolo, in sala o all'aperto sulla pedana in legno. Si resta fino a tardi.</p>
+        <p><span class="ph-note" data-i18n="mo.dinner.cond">[Orari da confermare]</span></p>
+        <a href="#prenota" data-i18n="mo.dinner.cta">Prenota un tavolo →</a>
+      </article>
+    </div>
+    <ul class="chips" aria-label="Servizi" data-i18n-aria="sv.label">
+      <li data-i18n="sv.outdoor">Tavoli all'esterno</li>
+      <li data-i18n="sv.take">Asporto</li>
+      <li data-i18n="sv.deliv">Consegna a domicilio</li>
+      <li data-i18n="sv.book">Prenotazioni</li>
+      <li data-i18n="sv.table">Servizio al tavolo</li>
+      <li data-i18n="sv.alc">Alcolici</li>
+      <li data-i18n="sv.card">Carte di credito</li>
+      <li data-i18n="sv.wifi">Wi-Fi gratuito</li>
+      <li data-i18n="sv.access">Accessibile in sedia a rotelle</li>
+      <li data-i18n="sv.veg">Opzioni vegetariane e vegane</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <p class="kicker" data-i18n="menu.kicker">Si mangia così</p>
+    <h2 data-i18n="menu.title">Il menù</h2>
+    <p class="lead" data-i18n="menu.lead">Panini gourmet con accostamenti ricercati, burger di carne con patatine, fritti croccanti, taglieri e birra alla spina.</p>
+    <p><span class="ph-note" data-i18n="menu.todo">[Menù completo e prezzi da aggiornare insieme al locale]</span></p>
+
+    <div class="botm" id="botm" aria-live="polite"></div>
+
+    <div class="mfilters" role="group" aria-label="Filtri del menù" data-i18n-aria="menu.filters">
+      <button class="tog" type="button" data-filter="V" aria-pressed="false" data-i18n="menu.f.v">Vegetariano</button>
+      <button class="tog" type="button" data-filter="VG" aria-pressed="false" data-i18n="menu.f.vg">Vegano</button>
+      <button class="tog" type="button" data-filter="SG" aria-pressed="false" data-i18n="menu.f.sg">Senza glutine</button>
+      <label><span data-i18n="menu.f.excl">Escludi allergene…</span>
+        <select id="exclAllergen"><option value="" data-i18n="menu.f.none">Nessuno</option></select>
+      </label>
+    </div>
+    <div class="warn" id="sgWarn" hidden data-i18n="menu.sgwarn">[Da verificare con il locale: piatti senza glutine e rischio di contaminazione]</div>
+    <div class="warn" id="exclWarn" hidden data-i18n="menu.exclwarn">I piatti con allergeni ancora da confermare restano visibili e sono segnati: chiedi sempre al personale.</div>
+
+    <div class="tabs" role="tablist" id="mtabs" aria-label="Categorie del menù" data-i18n-aria="menu.cats"></div>
+    <div id="mpanel" role="tabpanel" tabindex="0"></div>
+
+    <details class="legend">
+      <summary data-i18n="menu.legend">Legenda: allergeni e simboli</summary>
+      <ul id="legendList"></ul>
+      <p class="hint"><span class="bd">V</span> <span data-i18n="menu.l.v">vegetariano</span> · <span class="bd vg">VG</span> <span data-i18n="menu.l.vg">vegano</span> · <span class="bd sg">SG</span> <span data-i18n="menu.l.sg">senza glutine [da verificare]</span></p>
+    </details>
+  </div>
+</section>
+
+<!-- ORDINA E RITIRA -->
+<section class="dark" id="ordina">
+  <div class="wrap">
+    <p class="kicker" data-i18n="ord.kicker">Dal bancone alla tua pausa</p>
+    <h2 data-i18n="ord.title">Ordina e ritira</h2>
+    <p class="lead" data-i18n="ord.lead">Ordina direttamente da noi invece che dalle app: scegli i piatti, paga online o al ritiro e passa a prenderli all'orario che preferisci.</p>
+    <p><span class="ph-note" data-i18n="ord.deliv">[Consegna diretta: sì/no — da decidere]</span> <span class="ph-note" data-i18n="ord.prices">[Altri piatti ordinabili appena confermati i prezzi]</span></p>
+    <div class="ordgrid">
+      <div id="catalog" aria-label="Piatti ordinabili" data-i18n-aria="ord.catalog"></div>
+      <div class="cart">
+        <div class="panel" id="orderPanel">
+          <h3 data-i18n="ord.cart">Il tuo ordine</h3>
+          <div id="cartLines" aria-live="polite"></div>
+          <div class="total"><span data-i18n="ord.total">Totale</span><span id="cartTotal">0,00 €</span></div>
+          <form class="form" id="orderForm" novalidate>
+            <div class="fld"><label for="oName" data-i18n="f.name">Nome</label><input id="oName" type="text" autocomplete="name" required><div class="err" data-err="oName"></div></div>
+            <div class="fld"><label for="oPhone" data-i18n="f.phone">Telefono</label><input id="oPhone" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" data-err="oPhone"></div></div>
+            <div class="fld"><label for="oTime" data-i18n="ord.pickup">Orario di ritiro</label><select id="oTime" required></select><div class="hint" id="oDayHint"></div></div>
+            <fieldset class="fld"><legend data-i18n="ord.pay">Pagamento</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="oPay" value="online" checked><span data-i18n="ord.pay.online">Online (simulato)</span></label>
+                <label class="opt"><input type="radio" name="oPay" value="pickup"><span data-i18n="ord.pay.pickup">Al ritiro</span></label>
+              </div>
+            </fieldset>
+            <div class="fake" id="oCard">
+              <div class="fld"><label for="oCardNum" data-i18n="f.cardfake">Carta (finta — nessun dato reale)</label><input id="oCardNum" type="text" inputmode="numeric" autocomplete="off" placeholder="0000 0000 0000 0000"></div>
+              <p class="hint" data-i18n="f.demo">Demo: nessun pagamento viene effettuato e nessun dato viene salvato.</p>
+            </div>
+            <button class="btn btn-red" type="submit" id="oSubmit" data-i18n="ord.confirm">Conferma ordine</button>
+          </form>
+          <div id="orderDone" hidden></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRENOTA -->
+<section id="prenota">
+  <div class="wrap" style="max-width:820px">
+    <p class="kicker" data-i18n="bk.kicker">Un tavolo ti aspetta</p>
+    <h2 data-i18n="bk.title">Prenota un tavolo</h2>
+    <p class="lead" data-i18n="bk.lead">Scegli giorno, ora e numero di persone. Ti confermiamo subito, sul canale che preferisci.</p>
+    <div class="panel" id="bookPanel">
+      <ol class="steps" id="bkSteps"></ol>
+      <form class="form" id="bookForm" novalidate>
+        <div id="bkStep1" class="form">
+          <div class="row2 row3">
+            <div class="fld"><label for="bDate" data-i18n="f.date">Data</label><input id="bDate" type="date" required><div class="err" data-err="bDate"></div></div>
+            <div class="fld"><label for="bTime" data-i18n="f.time">Ora</label><select id="bTime" required></select><div class="hint" id="bTimeHint"></div></div>
+            <div class="fld"><label for="bPeople" data-i18n="f.people">Persone</label><input id="bPeople" type="number" min="1" max="40" value="2" required><div class="err" data-err="bPeople"></div></div>
+          </div>
+          <div class="warn" id="bGuar" hidden></div>
+          <div class="row2">
+            <div class="fld"><label for="bName" data-i18n="f.name">Nome</label><input id="bName" type="text" autocomplete="name" required><div class="err" data-err="bName"></div></div>
+            <div class="fld"><label for="bPhone" data-i18n="f.phone">Telefono</label><input id="bPhone" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" data-err="bPhone"></div></div>
+          </div>
+          <div class="fld"><label for="bEmail" data-i18n="f.email">Email</label><input id="bEmail" type="email" autocomplete="email"><div class="err" data-err="bEmail"></div></div>
+          <fieldset class="fld"><legend data-i18n="bk.channel">Dove vuoi ricevere conferma e promemoria?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="bChan" value="sms"><span>SMS</span></label>
+              <label class="opt"><input type="radio" name="bChan" value="wa" checked><span>WhatsApp</span></label>
+              <label class="opt"><input type="radio" name="bChan" value="email"><span>Email</span></label>
+            </div>
+          </fieldset>
+          <div class="fld"><label for="bNotes" data-i18n="bk.notes">Note (allergie, seggiolone, tavolo all'aperto…)</label><textarea id="bNotes"></textarea></div>
+          <p class="hint" data-i18n="bk.nocomm">Prenotando qui il ristorante non paga commissioni.</p>
+          <button class="btn btn-red" type="submit" data-i18n="bk.submit">Prenota</button>
+        </div>
+
+        <div id="bkStep2" class="form" hidden>
+          <h3 data-i18n="bk.g.title">Garanzia della prenotazione</h3>
+          <div class="warn" id="bkWhy"></div>
+          <ul id="bkTerms" class="muted"></ul>
+          <div class="fake">
+            <div class="fld"><label for="bCard" data-i18n="f.cardfake">Carta (finta — nessun dato reale)</label><input id="bCard" type="text" inputmode="numeric" autocomplete="off" placeholder="0000 0000 0000 0000"></div>
+            <div class="row2" style="margin-top:10px">
+              <div class="fld"><label for="bExp" data-i18n="f.exp">Scadenza</label><input id="bExp" type="text" autocomplete="off" placeholder="MM/AA"></div>
+              <div class="fld"><label for="bCvc" data-i18n="f.cvc">CVC</label><input id="bCvc" type="text" autocomplete="off" placeholder="000"></div>
+            </div>
+            <p class="hint" data-i18n="f.demo">Demo: nessun pagamento viene effettuato e nessun dato viene salvato.</p>
+          </div>
+          <div class="cta-row" style="margin:0">
+            <button class="btn btn-ghost" type="button" id="bkBack" data-i18n="f.back">Indietro</button>
+            <button class="btn btn-red" type="submit" data-i18n="bk.g.submit">Conferma con garanzia</button>
+          </div>
+        </div>
+      </form>
+      <div id="bkDone" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTI -->
+<section class="bord" id="eventi">
+  <div class="wrap" style="max-width:860px">
+    <p class="kicker" data-i18n="ev.kicker">Festeggia con noi</p>
+    <h2 data-i18n="ev.title">Eventi privati e gruppi</h2>
+    <p class="lead" data-i18n="ev.lead">Compleanni, cene aziendali, lauree, aperitivi di gruppo: raccontaci cosa hai in mente e prepariamo una proposta.</p>
+    <p><span class="ph-note" data-i18n="ev.cap">[Coperti interni / esterni]</span></p>
+    <div class="panel">
+      <form class="form" id="evForm" novalidate>
+        <div class="row2">
+          <div class="fld"><label for="eType" data-i18n="ev.type">Tipo di evento</label>
+            <select id="eType" required>
+              <option value="" data-i18n="f.choose">Scegli…</option>
+              <option value="birthday" data-i18n="ev.t.birthday">Compleanno</option>
+              <option value="corporate" data-i18n="ev.t.corporate">Cena aziendale</option>
+              <option value="ceremony" data-i18n="ev.t.ceremony">Comunione / battesimo</option>
+              <option value="graduation" data-i18n="ev.t.graduation">Laurea</option>
+              <option value="aperitif" data-i18n="ev.t.aperitif">Aperitivo di gruppo</option>
+              <option value="other" data-i18n="ev.t.other">Altro</option>
+            </select><div class="err" data-err="eType"></div></div>
+          <div class="fld"><label for="eDate" data-i18n="f.date">Data</label><input id="eDate" type="date" required><div class="err" data-err="eDate"></div></div>
+        </div>
+        <div class="row2 row3">
+          <div class="fld"><label for="eSlot" data-i18n="ev.slot">Fascia oraria</label>
+            <select id="eSlot"><option value="lunch" data-i18n="ev.s.lunch">Pranzo</option><option value="aperitif" data-i18n="ev.s.aperitif">Aperitivo</option><option value="dinner" data-i18n="ev.s.dinner">Cena</option></select></div>
+          <div class="fld"><label for="ePeople" data-i18n="f.people">Persone</label><input id="ePeople" type="number" min="2" max="300" value="10" required><div class="err" data-err="ePeople"></div></div>
+          <div class="fld"><label for="eBudget" data-i18n="ev.budget">Budget a persona</label>
+            <select id="eBudget"><option value="a" data-i18n="ev.b.a">[Fascia 1 — da definire]</option><option value="b" data-i18n="ev.b.b">[Fascia 2 — da definire]</option><option value="c" data-i18n="ev.b.c">[Fascia 3 — da definire]</option><option value="x" data-i18n="ev.b.x">Da concordare</option></select></div>
+        </div>
+        <fieldset class="fld"><legend data-i18n="ev.format">Formula</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="eFormat" value="fixed" checked><span data-i18n="ev.f.fixed">Menù fisso</span></label>
+            <label class="opt"><input type="radio" name="eFormat" value="carte"><span data-i18n="ev.f.carte">Alla carta</span></label>
+            <label class="opt"><input type="radio" name="eFormat" value="buffet"><span data-i18n="ev.f.buffet">Aperitivo a buffet</span></label>
+          </div></fieldset>
+        <div class="fld"><label for="eDiet" data-i18n="ev.diet">Esigenze alimentari</label><input id="eDiet" type="text"></div>
+        <fieldset class="fld"><legend><span data-i18n="ev.space">Spazio</span> <span class="ph-note" data-i18n="ev.avail">[disponibilità da confermare]</span></legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="eSpace" value="shared" checked><span data-i18n="ev.sp.shared">Tavoli riservati</span></label>
+            <label class="opt"><input type="radio" name="eSpace" value="inside"><span data-i18n="ev.sp.inside">Uso esclusivo del locale</span></label>
+            <label class="opt"><input type="radio" name="eSpace" value="deck"><span data-i18n="ev.sp.deck">Uso esclusivo del dehors</span></label>
+          </div></fieldset>
+        <div class="row2">
+          <div class="fld"><label for="eName" data-i18n="f.name">Nome</label><input id="eName" type="text" autocomplete="name" required><div class="err" data-err="eName"></div></div>
+          <div class="fld"><label for="ePhone" data-i18n="f.phone">Telefono</label><input id="ePhone" type="tel" autocomplete="tel" inputmode="tel" required><div class="err" data-err="ePhone"></div></div>
+        </div>
+        <div class="fld"><label for="eEmail" data-i18n="f.email">Email</label><input id="eEmail" type="email" autocomplete="email" required><div class="err" data-err="eEmail"></div></div>
+        <div class="fld"><label for="eNotes" data-i18n="f.notes">Note</label><textarea id="eNotes"></textarea></div>
+        <button class="btn btn-red" type="submit" data-i18n="ev.submit">Invia la richiesta</button>
+      </form>
+      <div id="evDone" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUONI REGALO -->
+<section class="alt" id="regali">
+  <div class="wrap">
+    <div class="xmas" id="xmas" data-i18n="gf.xmas">Natale da Panì: regala una cena, un aperitivo, una pausa pranzo. [Offerta natalizia da definire]</div>
+    <p class="kicker" data-i18n="gf.kicker">Un regalo goloso</p>
+    <h2 data-i18n="gf.title">Buoni regalo</h2>
+    <p class="lead" data-i18n="gf.lead">Scegli l'importo, scrivi due righe e invia il buono via email o WhatsApp, oppure stampalo.</p>
+    <div class="vgrid">
+      <form class="form panel" id="gfForm" novalidate>
+        <fieldset class="fld"><legend data-i18n="gf.amount">Importo</legend>
+          <div class="amounts opts" id="gfAmounts">
+            <label class="opt"><input type="radio" name="gAmt" value="25" checked><span>25 €</span></label>
+            <label class="opt"><input type="radio" name="gAmt" value="50"><span>50 €</span></label>
+            <label class="opt"><input type="radio" name="gAmt" value="100"><span>100 €</span></label>
+            <label class="opt"><input type="radio" name="gAmt" value="custom"><span data-i18n="gf.custom">Altro importo</span></label>
+          </div>
+          <div class="hint"><span class="ph-note" data-i18n="gf.cuts">[25 € / 50 € / 100 € — da confermare]</span></div>
+        </fieldset>
+        <div class="fld" id="gCustomWrap" hidden><label for="gCustom" data-i18n="gf.customl">Importo libero (€)</label><input id="gCustom" type="number" min="5" max="500" step="1" value="40"><div class="err" data-err="gCustom"></div></div>
+        <div class="row2">
+          <div class="fld"><label for="gFrom" data-i18n="gf.from">Da parte di</label><input id="gFrom" type="text" required><div class="err" data-err="gFrom"></div></div>
+          <div class="fld"><label for="gTo" data-i18n="gf.to">Per</label><input id="gTo" type="text" required><div class="err" data-err="gTo"></div></div>
+        </div>
+        <div class="fld"><label for="gMsg" data-i18n="gf.msg">Messaggio</label><textarea id="gMsg" maxlength="140"></textarea></div>
+        <fieldset class="fld"><legend data-i18n="gf.deliver">Come lo invii?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="gChan" value="email" checked><span>Email</span></label>
+            <label class="opt"><input type="radio" name="gChan" value="wa"><span>WhatsApp</span></label>
+            <label class="opt"><input type="radio" name="gChan" value="print"><span data-i18n="gf.print">Stampa</span></label>
+          </div></fieldset>
+        <div class="fld" id="gDestWrap"><label for="gDest" id="gDestL" data-i18n="gf.dest.email">Email del destinatario</label><input id="gDest" type="text"><div class="err" data-err="gDest"></div></div>
+        <button class="btn btn-red" type="submit" data-i18n="gf.buy">Acquista il buono (demo)</button>
+        <p class="hint" data-i18n="f.demo">Demo: nessun pagamento viene effettuato e nessun dato viene salvato.</p>
+      </form>
+      <div class="vprev">
+        <div class="voucher" id="voucher" aria-label="Anteprima del buono regalo" data-i18n-aria="gf.preview">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+            <div class="vm" aria-hidden="true">PA<b>NÍ</b><small style="font:500 .8rem var(--fh);letter-spacing:.02em">genuine food</small></div>
+            <div style="text-align:right"><small data-i18n="gf.v.label">Buono regalo</small></div>
+          </div>
+          <div>
+            <div class="va" id="vAmt">25 €</div>
+            <div class="vmsg" id="vMsg"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap">
+            <div><small><span data-i18n="gf.v.to">Per</span>: <b id="vTo">…</b></small><small><span data-i18n="gf.v.from">Da parte di</span>: <b id="vFrom">…</b></small><small><span data-i18n="gf.v.exp">Scadenza</span>: <span class="ph-note" data-i18n="gf.valid">[validità — da decidere]</span></small></div>
+            <div class="vcode" id="vCode">PANI-XXXX-XXXX</div>
+          </div>
+        </div>
+        <div id="gfDone" hidden style="margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section id="chi-siamo">
+  <div class="wrap about">
+    <div>
+      <p class="kicker" data-i18n="ab.kicker">Chi siamo</p>
+      <h2 data-i18n="ab.title">Genuine food, atmosfera di casa</h2>
+      <p data-i18n-html="ab.story"><span class="ph-note">[Storia del locale da raccontare dalla titolare]</span></p>
+      <p><strong data-i18n="ab.fab.t">Fabiana</strong> <span data-i18n="ab.fab.p">è la titolare, e chi passa da Panì la ricorda per l'accoglienza. Lo staff sorridente e l'atmosfera di casa sono quello che le recensioni raccontano più spesso.</span> <span class="ph-note" data-i18n="ab.fab.ok">[Confermare se la titolare vuole comparire]</span></p>
+      <h3 data-i18n="ab.phil.t">La filosofia "genuine food"</h3>
+      <p data-i18n-html="ab.phil.p">Panini gourmet con accostamenti ricercati, hamburger di carne di qualità, fritti croccanti e leggeri. <span class="ph-note">[Da dove vengono pane, carne e salumi — fornitori da confermare]</span></p>
+    </div>
+    <figure class="ph" style="--ar:4/5" role="img" aria-label="Il bancone con la titolare e lo staff che sorridono" data-i18n-aria="ph.staff.alt">
+      <span data-i18n="ph.staff">[Foto: il bancone con la titolare / lo staff]</span>
+    </figure>
+  </div>
+</section>
+
+<!-- GALLERIA -->
+<section class="alt" id="galleria">
+  <div class="wrap">
+    <p class="kicker" data-i18n="ga.kicker">Un assaggio</p>
+    <h2 data-i18n="ga.title">Galleria</h2>
+    <p><span class="ph-note" data-i18n="ga.todo">[Servizio fotografico da fare — descrizioni degli scatti qui sotto]</span></p>
+    <div class="gal">
+      <figure class="ph" style="--ar:4/3" role="img" aria-label="Dehors sulla pedana in legno con il verde del lago dietro, all'ora dell'aperitivo" data-i18n-aria="ph.deck.alt"><span data-i18n="ph.deck">[Foto: dehors sulla pedana in legno con il verde del lago dietro, ora dell'aperitivo]</span></figure>
+      <figure class="ph" style="--ar:4/3" role="img" aria-label="Burger con patatine visto dall'alto su un tagliere di legno" data-i18n-aria="ph.burger.alt"><span data-i18n="ph.burger">[Foto: burger con patatine dall'alto, su tagliere di legno]</span></figure>
+      <figure class="ph" style="--ar:4/3" role="img" aria-label="Supplì alla carbonara spezzato con il ripieno in vista" data-i18n-aria="ph.suppli.alt"><span data-i18n="ph.suppli">[Foto: supplì alla carbonara spezzato con il ripieno in vista]</span></figure>
+      <figure class="ph" style="--ar:4/3" role="img" aria-label="Tagliere di salumi e formaggi con un bicchiere di birra alla spina" data-i18n-aria="ph.tagliere.alt"><span data-i18n="ph.tagliere">[Foto: tagliere salumi e formaggi con birra alla spina]</span></figure>
+      <figure class="ph" style="--ar:4/3" role="img" aria-label="Sala interna con i tavoli apparecchiati" data-i18n-aria="ph.sala.alt"><span data-i18n="ph.sala">[Foto: sala interna, coperti apparecchiati]</span></figure>
+      <figure class="ph" style="--ar:4/3" role="img" aria-label="Il bancone del locale con la titolare e lo staff" data-i18n-aria="ph.banco.alt"><span data-i18n="ph.banco">[Foto: il bancone con la titolare / lo staff]</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- RECENSIONI -->
+<section id="recensioni">
+  <div class="wrap">
+    <p class="kicker" data-i18n="rv.kicker">Dicono di noi</p>
+    <h2 data-i18n="rv.title">Recensioni</h2>
+    <div class="grid g2" style="margin-bottom:20px">
+      <div class="card"><div class="rbig">4,3<span style="font-size:1.2rem">/5</span></div><div class="stars" aria-hidden="true">★★★★☆</div><p class="muted" style="margin:6px 0 0" data-i18n="rv.ta">TripAdvisor · circa 410 recensioni</p></div>
+      <div class="card"><div class="rbig"><span class="ph-note" style="font-size:1rem" data-i18n="hero.google">[Voto Google e numero recensioni]</span></div><p class="muted" style="margin:10px 0 0">Google</p></div>
+    </div>
+    <div class="grid g3">
+      <blockquote class="card" style="margin:0"><p class="ph-note" data-i18n="rv.pick">[Recensione Google da selezionare con il titolare]</p></blockquote>
+      <blockquote class="card" style="margin:0"><p class="ph-note" data-i18n="rv.pick">[Recensione Google da selezionare con il titolare]</p></blockquote>
+      <blockquote class="card" style="margin:0"><p class="ph-note" data-i18n="rv.pick">[Recensione Google da selezionare con il titolare]</p></blockquote>
+    </div>
+    <p style="margin-top:22px"><a class="btn btn-green" href="#" data-placeholder-link id="reviewLink"><span data-i18n="rv.cta">Lascia una recensione</span>&nbsp;<span class="ph-note" style="background:#fff" data-i18n="rv.link">[Link alla scheda Google]</span></a></p>
+  </div>
+</section>
+
+<!-- DOVE SIAMO -->
+<section class="dark" id="dove">
+  <div class="wrap">
+    <p class="kicker" data-i18n="wh.kicker">Vieni a trovarci</p>
+    <h2 data-i18n="wh.title">Dove siamo</h2>
+    <div class="where">
+      <div>
+        <address style="font-style:normal;font-size:1.15rem;margin-bottom:12px"><strong>Panì Genuine Food</strong><br>Viale America 13, 00144 Roma<br><span data-i18n="wh.zone">Quartiere EUR, a due passi dal Laghetto dell'EUR (Parco Centrale del Lago)</span></address>
+        <h3 data-i18n="wh.hours">Orari</h3>
+        <table class="hours"><caption class="sr" data-i18n="wh.hours">Orari</caption><tbody id="hoursTable"></tbody></table>
+        <p style="margin-top:8px"><span class="ph-note" data-i18n="wh.hoursok">[Orari da confermare]</span></p>
+        <h3 style="margin-top:20px" data-i18n="wh.how">Come arrivare</h3>
+        <p><span class="ph-note" data-i18n="wh.metro">[Metro più vicina — verificare]</span> <span class="ph-note" data-i18n="wh.park">[Parcheggio]</span></p>
+        <p><a class="btn btn-light" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=41.8316541,12.4619294"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="dock.dir">Indicazioni</span></a></p>
+      </div>
+      <iframe class="map" title="Mappa: Panì Genuine Food, Viale America 13, Roma" data-i18n-title="wh.maptitle" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=41.8316541,12.4619294&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-g">
+      <div>
+        <div class="logo-m" aria-hidden="true" style="font-size:1.6rem">PA<b>NÍ</b></div>
+        <div class="logo-s" aria-hidden="true" style="margin-bottom:10px">genuine <b>food</b></div>
+        <p>Viale America 13, 00144 Roma</p>
+      </div>
+      <div>
+        <h3 data-i18n="ft.contacts">Contatti</h3>
+        <p><a href="tel:+393471172963">+39 347 117 2963</a><br>
+        <a href="https://wa.me/393471172963" id="ftWa" target="_blank" rel="noopener">WhatsApp</a><br>
+        <span class="ph-note" data-i18n="ft.email">[Email del locale]</span><br>
+        <span class="ph-note" data-i18n="ft.wa">[Confermare che il numero WhatsApp sia questo]</span></p>
+      </div>
+      <div>
+        <h3 data-i18n="wh.hours">Orari</h3>
+        <p id="ftHours" style="margin:0"></p>
+        <p style="margin:6px 0 0"><span class="ph-note" data-i18n="wh.hoursok">[Orari da confermare]</span></p>
+      </div>
+      <div>
+        <h3 data-i18n="ft.follow">Seguici</h3>
+        <p><span class="ph-note">[Instagram]</span> <span class="ph-note">[Facebook]</span></p>
+      </div>
+    </div>
+    <p style="margin-top:26px;border-top:1px solid rgba(255,255,255,.2);padding-top:16px">
+      <span class="ph-note" data-i18n="ft.rs">[Ragione sociale]</span> · <span class="ph-note" data-i18n="ft.piva">[P.IVA]</span> ·
+      <a href="#" data-placeholder-link><span class="ph-note">[Privacy policy]</span></a> ·
+      <a href="#" data-placeholder-link><span class="ph-note">[Cookie policy]</span></a> ·
+      <a href="#" id="cookieReopen" data-i18n="ck.manage">Gestisci cookie</a>
+    </p>
+    <span class="demo-badge" data-i18n="ft.demo">Anteprima — funzioni dimostrative</span>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Azioni rapide" data-i18n-aria="dock.label">
+  <a href="tel:+393471172963"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="dock.call">Chiama</span></a>
+  <a id="dockWa" href="https://wa.me/393471172963" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span>WhatsApp</span></a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=41.8316541,12.4619294" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="dock.dir">Indicazioni</span></a>
+  <a class="main" href="#prenota"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="hdr.book">Prenota</span></a>
+</nav>
+
+<div class="cookie" id="cookie" role="dialog" aria-labelledby="ckT">
+  <strong id="ckT" data-i18n="ck.title">Cookie</strong>
+  <p style="margin:4px 0 0" data-i18n-html="ck.text">Questo sito usa cookie tecnici e, per la mappa, servizi di terze parti. <span>[Testo legale da far verificare]</span></p>
+  <div class="cta-row">
+    <button class="btn btn-green btn-sm" type="button" data-ck="all" data-i18n="ck.accept">Accetta</button>
+    <button class="btn btn-ghost btn-sm" type="button" data-ck="min" style="color:var(--bord)" data-i18n="ck.min">Solo necessari</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+/* =====================================================================
+   1) MENÙ — UNICA FONTE DEI DATI DEL MENÙ
+   Per aggiornare un piatto basta cambiare UNA riga qui sotto: il sito,
+   il filtro, l'ordinazione e il markup schema.org (JSON-LD) si aggiornano da soli.
+
+   Ogni piatto è una riga con queste chiavi:
+     id  identificativo unico (senza spazi)
+     n   nome: testo oppure ['italiano','english']
+     d   descrizione ['italiano','english']
+     p   prezzo in euro (numero, es. 6.5) oppure null = "[Prezzo — da confermare]"
+     o   true = prezzo ripreso dal menù del 2015 (mostrato con asterisco, DA AGGIORNARE)
+     t   badge: 'V' vegetariano, 'VG' vegano, 'SG' senza glutine  (es. ['V'])
+     a   allergeni UE, da: glutine, crostacei, uova, pesce, arachidi, soia, latte, guscio,
+         sedano, senape, sesamo, solfiti, lupini, molluschi  (es. ['glutine','latte']);
+         null = "[Allergeni da confermare]"
+     x   (facoltativo) riga in inglese che spiega il piatto a un turista
+     ph  true = voce segnaposto (non entra nel JSON-LD)
+   Le parti tra [parentesi quadre] sono segnaposto: vengono evidenziate in pagina.
+   Solo i piatti con un prezzo (p diverso da null) sono ordinabili in "Ordina e ritira".
+   ===================================================================== */
+const MENU = {
+  // Burger del mese: box evidenziato, si aggiorna cambiando queste righe.
+  burgerOfMonth: {
+    n: ['[Nome del burger del mese]', '[Burger of the month — name]'],
+    d: ['[Ingredienti del burger del mese]', '[Ingredients of the burger of the month]'],
+    p: null
+  },
+  // Le prime 22 voci di "Panini e baguette" vengono dalla FOTO DEL MENÙ DEL 2015 (TripAdvisor):
+  // ricette e prezzi vanno aggiornati con il locale. Il 4,50 € è la cifra in testa alla sezione
+  // "Vegetariani / Salumi" della foto: da verificare che valga per tutte quelle voci.
+  categories: [
+    { id: 'panini', n: ['Panini e baguette', 'Sandwiches & baguettes'],
+      note: ['* Prezzi e ricette dal menù del 2015: [da aggiornare con il locale]', '* Prices and recipes from the 2015 menu: [to be updated with the venue]'],
+      items: [
+        { id: 'firenze',    n: 'Firenze',    d: ['Prosciutto cotto di Praga, mozzarella, pomodoro, rucola, olio extravergine d\'oliva', 'Prague-style cooked ham, mozzarella, tomato, rocket, extra virgin olive oil'], p: 6.00, o: true, t: [], a: null },
+        { id: 'saigon',     n: 'Saigon',     d: ['Salmone, prosciutto cotto di Praga, salsa Worcester', 'Salmon, Prague-style cooked ham, Worcestershire sauce'], p: 6.00, o: true, t: [], a: null },
+        { id: 'boston',     n: 'Boston',     d: ['Prosciutto cotto di Praga, provola affumicata, salsa Worcester', 'Prague-style cooked ham, smoked provola cheese, Worcestershire sauce'], p: 6.00, o: true, t: [], a: null },
+        { id: 'montecarlo', n: 'Montecarlo', d: ['Prosciutto cotto di Praga, funghi porcini, brie, lattuga', 'Prague-style cooked ham, porcini mushrooms, brie, lettuce'], p: 6.00, o: true, t: [], a: null },
+        { id: 'manila',     n: 'Manila',     d: ['Salmone, zucchine, provola', 'Salmon, courgette, provola cheese'], p: 6.00, o: true, t: [], a: null },
+        { id: 'pani',       n: 'Panì',       d: ['Prosciutto patanegra, salsa di pomodoro, olio DOP', 'Patanegra ham, tomato sauce, PDO olive oil'], p: 8.50, o: true, t: [], a: null },
+        { id: 'madrid',     n: 'Madrid',     d: ['Prosciutto patanegra bellota', 'Patanegra "bellota" ham (acorn-fed Iberian ham)'], p: 8.50, o: true, t: [], a: null },
+        { id: 'parma',      n: 'Parma',      d: ['Culatello, funghi porcini, pepe', 'Culatello (prized cured pork), porcini mushrooms, pepper'], p: 6.50, o: true, t: [], a: null },
+        { id: 'nairobi',    n: 'Nairobi',    d: ['Culatello, stracchino, zucchine, pomodori secchi', 'Culatello (prized cured pork), stracchino (soft cheese), courgette, sun-dried tomatoes'], p: 6.50, o: true, t: [], a: null },
+        { id: 'zurigo',     n: 'Zurigo',     d: ['Culatello, rucola, salsa tartufata', 'Culatello (prized cured pork), rocket, truffle sauce'], p: 6.50, o: true, t: [], a: null },
+        { id: 'giacarta',   n: 'Giacarta',   d: ['Culatello, primo sale, pomodoro, salsa al basilico', 'Culatello (prized cured pork), primo sale (fresh cheese), tomato, basil sauce'], p: 6.50, o: true, t: [], a: null },
+        { id: 'valencia',   n: 'Valencia',   d: ['Chorizo, lardo di patanegra, pomodoro', 'Chorizo, patanegra lard, tomato'], p: 6.00, o: true, t: [], a: null },
+        { id: 'bilbao',     n: 'Bilbao',     d: ['Chorizo, caciotta sarda, lattuga', 'Chorizo, Sardinian caciotta cheese, lettuce'], p: 6.00, o: true, t: [], a: null },
+        { id: 'shanghai',   n: 'Shanghai',   d: ['Melanzane, mozzarella, zucchine, rucola', 'Aubergine, mozzarella, courgette, rocket'], p: 4.50, o: true, t: ['V'], a: null },
+        { id: 'nizza',      n: 'Nizza',      d: ['Mozzarella, pomodoro, basilico fresco', 'Mozzarella, tomato, fresh basil'], p: 4.50, o: true, t: ['V'], a: null },
+        { id: 'roma',       n: 'Roma',       d: ['Prosciutto crudo, mozzarella, pomodoro, salsa al basilico', 'Cured ham (prosciutto crudo), mozzarella, tomato, basil sauce'], p: 4.50, o: true, t: [], a: null },
+        { id: 'losangeles', n: 'Los Angeles', d: ['Speck, stracchino, funghi, rucola', 'Speck (smoked cured ham), stracchino (soft cheese), mushrooms, rocket'], p: 4.50, o: true, t: [], a: null },
+        { id: 'lisbona',    n: 'Lisbona',    d: ['Prosciutto cotto, scamorza affumicata, [ingrediente illeggibile nella foto], salsa rosa', 'Cooked ham, smoked scamorza cheese, [ingredient unreadable in the photo], pink sauce'], p: 4.50, o: true, t: [], a: null },
+        { id: 'telaviv',    n: 'Tel Aviv',   d: ['Fesa di tacchino, pomodoro, grana, rucola', 'Turkey breast, tomato, grana cheese, rocket'], p: 4.50, o: true, t: [], a: null },
+        { id: 'lima',       n: 'Lima',       d: ['Mortadella, mozzarella, carciofini, lattuga', 'Mortadella, mozzarella, artichokes, lettuce'], p: 4.50, o: true, t: [], a: null },
+        { id: 'sofia',      n: 'Sofia',      d: ['Salame, fontina, zucchine, crema di olive', 'Salami, fontina cheese, courgette, olive cream'], p: 4.50, o: true, t: [], a: null },
+        { id: 'varsavia',   n: 'Varsavia',   d: ['Wurstel, crauti, senape', 'Frankfurter, sauerkraut, mustard'], p: 4.50, o: true, t: [], a: null },
+        { id: 'pulledpork', n: 'Panino pulled pork', d: ['Il nostro panino con pulled pork. [Ingredienti — da confermare]', 'Our pulled pork sandwich. [Ingredients — to be confirmed]'], p: null, t: [], a: null,
+          x: 'Pulled pork is pork slow-cooked until it is so tender it can be shredded by hand.' },
+        { id: 'gourmet1',   n: ['[Nome panino gourmet]', '[Gourmet sandwich name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'veg1',       n: ['[Nome panino vegetariano]', '[Vegetarian sandwich name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: ['V'], a: null, ph: true },
+        { id: 'vegan1',     n: ['[Nome panino vegano]', '[Vegan sandwich name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: ['VG'], a: null, ph: true },
+        { id: 'sg1',       n: ['[Piatto senza glutine]', '[Gluten-free dish]'], d: ['[Ingredienti — da verificare con il locale, rischio di contaminazione incluso]', '[Ingredients — to be checked with the venue, cross-contamination risk included]'], p: null, t: ['SG'], a: null, ph: true }
+      ] },
+    { id: 'burger', n: ['Hamburger', 'Burgers'], items: [
+        { id: 'burger-carne', n: ['Hamburger di carne', 'Meat burger'], d: ['Hamburger di carne di qualità, servito con patatine. [Ingredienti — da confermare]', 'Quality meat burger served with fries. [Ingredients — to be confirmed]'], p: null, t: [], a: null },
+        { id: 'burger2', n: ['[Nome burger]', '[Burger name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'burger3', n: ['[Nome burger]', '[Burger name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'burger-veg', n: ['[Burger vegetariano / vegano]', '[Vegetarian / vegan burger]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: ['VG'], a: null, ph: true }
+      ] },
+    { id: 'fritti', n: ['Fritti', 'Fried bites'], items: [
+        { id: 'suppli', n: ['Supplì alla carbonara', 'Carbonara supplì'], d: ['Il fritto croccante e leggero di casa. [Ingredienti — da confermare]', 'A crispy, light house favourite. [Ingredients — to be confirmed]'], p: null, t: [], a: null,
+          x: 'A supplì is a Roman street-food classic: a golden fried rice croquette with a soft, savoury heart. This one is inspired by carbonara, the famous Roman pasta.' },
+        { id: 'filacci', n: ['Filacci di pollo con salsa', 'Chicken filacci with dipping sauce'], d: ['Filacci di pollo croccanti, serviti con salsa. [Ingredienti — da confermare]', 'Crispy chicken strips served with a dipping sauce. [Ingredients — to be confirmed]'], p: null, t: [], a: null,
+          x: 'Filacci are crispy fried strips of chicken, perfect for sharing with a cold beer.' },
+        { id: 'fritto3', n: ['[Nome fritto]', '[Fried bite name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'fritto4', n: ['[Fritto vegetariano]', '[Vegetarian fried bite]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: ['V'], a: null, ph: true }
+      ] },
+    { id: 'taglieri', n: ['Taglieri e aperitivo', 'Boards & aperitivo'], items: [
+        { id: 'tagliere', n: ['Tagliere di salumi e formaggi', 'Cured meats & cheese board'], d: ['Salumi e formaggi su tagliere di legno. [Selezione — da confermare]', 'Cured meats and cheeses on a wooden board. [Selection — to be confirmed]'], p: null, t: [], a: null,
+          x: 'A tagliere is a wooden board of Italian cured meats and cheeses, made to be shared.' },
+        { id: 'piatto-pani', n: ['Piatto Panì', 'Panì platter'], d: ['[Cosa contiene il piatto Panì]', '[What the Panì platter contains]'], p: null, t: [], a: null },
+        { id: 'apericena', n: ['Apericena', 'Apericena'], d: ['[Formula e orari dell\'apericena — da confermare]', '[Apericena format and times — to be confirmed]'], p: null, t: [], a: null,
+          x: 'Apericena is the Italian aperitivo that grows into a light dinner: drinks plus plenty of food to share.' },
+        { id: 'taglieri3', n: ['[Nome tagliere]', '[Board name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true }
+      ] },
+    { id: 'primi', n: ['Primi [da confermare]', 'Pasta & first courses [to be confirmed]'], items: [
+        { id: 'primo1', n: ['[Nome primo piatto]', '[First course name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'primo2', n: ['[Nome primo piatto]', '[First course name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'primo3', n: ['[Primo vegetariano]', '[Vegetarian first course]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: ['V'], a: null, ph: true }
+      ] },
+    { id: 'dolci', n: ['Dolci [da confermare]', 'Desserts [to be confirmed]'], items: [
+        { id: 'dolce1', n: ['[Nome dolce]', '[Dessert name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'dolce2', n: ['[Nome dolce]', '[Dessert name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true },
+        { id: 'dolce3', n: ['[Nome dolce]', '[Dessert name]'], d: ['[Ingredienti]', '[Ingredients]'], p: null, t: [], a: null, ph: true }
+      ] },
+    { id: 'bevande', n: ['Birre alla spina e bevande', 'Draught beer & drinks'], items: [
+        { id: 'birra-spina', n: ['Birra alla spina', 'Draught beer'], d: ['[Birre alla spina — marche, stili e formati]', '[Draught beers — brands, styles and sizes]'], p: null, t: [], a: null },
+        { id: 'vino', n: ['[Vino al calice / in bottiglia]', '[Wine by the glass / bottle]'], d: ['[Etichette]', '[Labels]'], p: null, t: [], a: null, ph: true },
+        { id: 'bibite', n: ['[Bibite e acqua]', '[Soft drinks and water]'], d: ['[Elenco]', '[List]'], p: null, t: [], a: null, ph: true },
+        { id: 'caffe', n: ['[Caffè e bevande calde]', '[Coffee and hot drinks]'], d: ['[Elenco]', '[List]'], p: null, t: [], a: null, ph: true }
+      ] }
+  ]
+};
+
+// I 14 allergeni UE (Reg. 1169/2011): emoji + nome nelle due lingue
+const ALLERGENS = {
+  glutine:   { e: '🌾', n: ['Glutine', 'Gluten'] },
+  crostacei: { e: '🦀', n: ['Crostacei', 'Crustaceans'] },
+  uova:      { e: '🥚', n: ['Uova', 'Eggs'] },
+  pesce:     { e: '🐟', n: ['Pesce', 'Fish'] },
+  arachidi:  { e: '🥜', n: ['Arachidi', 'Peanuts'] },
+  soia:      { e: '🫘', n: ['Soia', 'Soy'] },
+  latte:     { e: '🥛', n: ['Latte e derivati', 'Milk'] },
+  guscio:    { e: '🌰', n: ['Frutta a guscio', 'Tree nuts'] },
+  sedano:    { e: '🥬', n: ['Sedano', 'Celery'] },
+  senape:    { e: '🟡', n: ['Senape', 'Mustard'] },
+  sesamo:    { e: '⚪', n: ['Semi di sesamo', 'Sesame'] },
+  solfiti:   { e: '🍷', n: ['Solfiti', 'Sulphites'] },
+  lupini:    { e: '🌼', n: ['Lupini', 'Lupin'] },
+  molluschi: { e: '🐚', n: ['Molluschi', 'Molluscs'] }
+};
+
+/* =====================================================================
+   2) CONFIGURAZIONE (orari, regole di garanzia, flag)
+   ===================================================================== */
+const CONFIG = {
+  phone: '+393471172963',          // [Confermare che il numero WhatsApp sia questo]
+  whatsapp: '393471172963',
+  coords: { lat: 41.8316541, lng: 12.4619294 },
+  // Orari per giorno della settimana (0 = domenica … 6 = sabato). [Orari da confermare] — fonte: TripAdvisor
+  hours: { 0: ['17:00', '23:30'], 1: ['11:30', '23:30'], 2: ['11:30', '23:30'], 3: ['11:30', '23:30'], 4: ['11:30', '23:30'], 5: ['11:30', '23:30'], 6: ['17:00', '23:30'] },
+  hourGroups: [ { days: [1, 2, 3, 4, 5], k: 'wh.mf' }, { days: [6], k: 'wh.sat' }, { days: [0], k: 'wh.sun' } ],
+  booking: {
+    slotMinutes: 30,
+    lastSlotBeforeClose: 60,       // [da decidere] ultimo tavolo = chiusura − 60 min
+    minLeadMinutes: 60,            // [da decidere] preavviso minimo per prenotare per oggi
+    durationMinutes: 120           // [da decidere] solo per l'evento nel calendario (.ics)
+  },
+  // Quando serve caparra / carta a garanzia. Tutto configurabile qui.
+  guarantee: {
+    minPeople: 8,                  // [8] persone in su
+    dates: ['02-14', '12-31'],     // San Valentino, Capodanno (MM-GG)
+    saturdayEvening: true,         // sabato sera…
+    saturdayEveningFrom: '19:00',  // …da quest'ora [da decidere]
+    depositPerPerson: null,        // null = "[€ per persona — da decidere]"; es. 10 per 10 €
+    cancelHours: null              // null = "[entro X ore — da decidere]"; es. 24
+  },
+  pickup: { slotMinutes: 15, prepMinutes: 20 /* [da decidere] */, lastBeforeClose: 15 },
+  christmasBanner: false           // true = mostra il banner "Natale" nei buoni regalo (oppure aggiungi ?natale all'indirizzo)
+};
+</script>
+<script>
+/* =====================================================================
+   3) TESTI IT / EN — tutti i testi del sito in un dizionario.
+   {parole} sono variabili. I segnaposto restano tra [parentesi quadre] anche in inglese.
+   ===================================================================== */
+const I18N = {
+it: {
+  'seo.title': 'Panì Genuine Food — Panini, burger, fritti e birra | Viale America, EUR, Roma',
+  'seo.desc': "Panì Genuine Food, paninoteca gourmet e hamburgeria con birreria all'EUR, Roma. Panini, burger, fritti, aperitivo e cena in Viale America 13, a due passi dal Laghetto. Prenota o ordina da ritirare.",
+  'seo.og': "Panini, burger, fritti e birra davanti al Laghetto dell'EUR. Prenota un tavolo o ordina da ritirare.",
+  'skip': 'Vai al contenuto',
+  'nav.label': 'Menu principale', 'nav.toggle': 'Apri il menu',
+  'nav.menu': 'Menù', 'nav.order': 'Ordina', 'nav.book': 'Prenota', 'nav.events': 'Eventi', 'nav.gift': 'Buoni regalo', 'nav.about': 'Chi siamo', 'nav.where': 'Dove siamo',
+  'hdr.book': 'Prenota',
+  'hero.kicker': 'Paninoteca gourmet · hamburgeria · birreria',
+  'hero.title': 'Panini, burger e fritti. <em>Genuini, come a casa.</em>',
+  'hero.sub': "Panini, burger, fritti e birra davanti al Laghetto dell'EUR. Per la pausa pranzo, l'aperitivo e la cena, fino a tardi.",
+  'hero.cta1': 'Prenota un tavolo', 'hero.cta2': 'Ordina da ritirare',
+  'hero.rate': 'su TripAdvisor · circa 410 recensioni',
+  'hero.google': '[Voto Google e numero recensioni]',
+  'open.on': 'Aperto ora — chiude alle {t}', 'open.off': 'Chiuso — apre {w} alle {t}',
+  'wd.today': 'oggi', 'wd.tomorrow': 'domani', 'wd.on': '{d}',
+  'day.0': 'domenica', 'day.1': 'lunedì', 'day.2': 'martedì', 'day.3': 'mercoledì', 'day.4': 'giovedì', 'day.5': 'venerdì', 'day.6': 'sabato',
+  'ph.hero.alt': 'Panino gourmet tagliato a metà in primo piano, sullo sfondo il bancone sfocato, luce calda',
+  'ph.hero': '[Foto: panino gourmet tagliato a metà in primo piano, sfondo sfocato del bancone, luce calda]',
+  'mo.kicker': 'Un solo posto', 'mo.title': 'Tre momenti per stare bene da Panì',
+  'mo.lunch.t': 'Pausa pranzo',
+  'mo.lunch.p': "Panini, burger e fritti per staccare dall'ufficio: al tavolo, all'aperto o da portare via e mangiare sul prato davanti al lago. Fascia di prezzo €.",
+  'mo.lunch.water': "Acqua omaggio per chi lavora negli uffici dell'EUR, dal lunedì al venerdì.",
+  'mo.lunch.cond': '[Condizioni da confermare]', 'mo.lunch.cta': 'Ordina da ritirare →',
+  'mo.aperi.t': 'Aperitivo',
+  'mo.aperi.p': "Birra alla spina, tagliere di salumi e formaggi e fritti croccanti: l'aperitivo e l'apericena sono tra le cose più apprezzate dai nostri ospiti.",
+  'mo.aperi.cond': "[Orari e formula dell'aperitivo da confermare]", 'mo.aperi.cta': 'Guarda il menù →',
+  'mo.dinner.t': 'Cena',
+  'mo.dinner.p': 'Una cena informale e golosa, con il servizio al tavolo, in sala o all\'aperto sulla pedana in legno. Si resta fino a tardi.',
+  'mo.dinner.cond': '[Orari da confermare]', 'mo.dinner.cta': 'Prenota un tavolo →',
+  'sv.label': 'Servizi',
+  'sv.outdoor': "Tavoli all'esterno", 'sv.take': 'Asporto', 'sv.deliv': 'Consegna a domicilio', 'sv.book': 'Prenotazioni', 'sv.table': 'Servizio al tavolo',
+  'sv.alc': 'Alcolici', 'sv.card': 'Carte di credito', 'sv.wifi': 'Wi-Fi gratuito', 'sv.access': 'Accessibile in sedia a rotelle', 'sv.veg': 'Opzioni vegetariane e vegane',
+  'menu.kicker': 'Si mangia così', 'menu.title': 'Il menù',
+  'menu.lead': 'Panini gourmet con accostamenti ricercati, burger di carne con patatine, fritti croccanti, taglieri e birra alla spina.',
+  'menu.todo': '[Menù completo e prezzi da aggiornare insieme al locale]',
+  'menu.filters': 'Filtri del menù', 'menu.cats': 'Categorie del menù',
+  'menu.f.v': 'Vegetariano', 'menu.f.vg': 'Vegano', 'menu.f.sg': 'Senza glutine', 'menu.f.excl': 'Escludi allergene…', 'menu.f.none': 'Nessuno',
+  'menu.sgwarn': '[Da verificare con il locale: piatti senza glutine e rischio di contaminazione]',
+  'menu.exclwarn': 'I piatti con allergeni ancora da confermare restano visibili e sono segnati: chiedi sempre al personale.',
+  'menu.legend': 'Legenda: allergeni e simboli',
+  'menu.l.v': 'vegetariano', 'menu.l.vg': 'vegano', 'menu.l.sg': 'senza glutine [da verificare]',
+  'menu.bom': 'Il burger del mese',
+  'menu.price.tbd': '[Prezzo — da confermare]', 'menu.allg.tbd': '[Allergeni da confermare]',
+  'menu.noitems': 'Nessun piatto corrisponde ai filtri scelti.',
+  'menu.add': 'Aggiungi', 'menu.added': 'Aggiunto all\'ordine: {n}',
+  'ord.kicker': 'Dal bancone alla tua pausa', 'ord.title': 'Ordina e ritira',
+  'ord.lead': "Ordina direttamente da noi invece che dalle app: scegli i piatti, paga online o al ritiro e passa a prenderli all'orario che preferisci.",
+  'ord.deliv': '[Consegna diretta: sì/no — da decidere]', 'ord.prices': '[Altri piatti ordinabili appena confermati i prezzi]',
+  'ord.catalog': 'Piatti ordinabili', 'ord.cart': 'Il tuo ordine', 'ord.total': 'Totale',
+  'ord.empty': 'Il carrello è vuoto: aggiungi qualche piatto dalla lista.',
+  'ord.pickup': 'Orario di ritiro', 'ord.pay': 'Pagamento', 'ord.pay.online': 'Online (simulato)', 'ord.pay.pickup': 'Al ritiro',
+  'ord.confirm': 'Conferma ordine',
+  'ord.day.hint': 'Ritiro {w}', 'ord.noslots': 'Nessun orario di ritiro disponibile nei prossimi giorni.',
+  'ord.err.empty': 'Aggiungi almeno un piatto.',
+  'ord.done.t': 'Ordine ricevuto!', 'ord.done.num': 'Numero ordine', 'ord.done.pick': 'Ritiro: {w} alle {t}',
+  'ord.done.payo': 'Pagamento online: simulato, nessun addebito reale.', 'ord.done.payp': 'Pagamento al ritiro.',
+  'ord.done.demo': 'Anteprima: questo ordine non è stato inviato a nessuno.', 'ord.new': 'Nuovo ordine',
+  'f.name': 'Nome', 'f.phone': 'Telefono', 'f.email': 'Email', 'f.date': 'Data', 'f.time': 'Ora', 'f.people': 'Persone', 'f.notes': 'Note',
+  'f.choose': 'Scegli…', 'f.back': 'Indietro', 'f.exp': 'Scadenza', 'f.cvc': 'CVC',
+  'f.cardfake': 'Carta (finta — nessun dato reale)',
+  'f.demo': 'Demo: nessun pagamento viene effettuato e nessun dato viene salvato.',
+  'err.req': 'Campo obbligatorio', 'err.email': 'Email non valida', 'err.phone': 'Numero di telefono non valido',
+  'err.people': 'Inserisci un numero valido', 'err.time': 'Scegli un orario', 'err.amount': 'Importo non valido (5–500 €)',
+  'bk.kicker': 'Un tavolo ti aspetta', 'bk.title': 'Prenota un tavolo',
+  'bk.lead': 'Scegli giorno, ora e numero di persone. Ti confermiamo subito, sul canale che preferisci.',
+  'bk.channel': 'Dove vuoi ricevere conferma e promemoria?',
+  'bk.notes': "Note (allergie, seggiolone, tavolo all'aperto…)",
+  'bk.nocomm': 'Prenotando qui il ristorante non paga commissioni.',
+  'bk.submit': 'Prenota',
+  'bk.noslots': 'Nessun orario disponibile in questo giorno: scegli un altro giorno.',
+  'bk.open': 'Aperti dalle {o} alle {c}',
+  'bk.s1': 'Dati', 'bk.s2': 'Garanzia', 'bk.s3': 'Conferma',
+  'bk.guar.hint': 'Per questa prenotazione ti chiederemo una carta a garanzia ({r}). Nessun addebito in questa demo.',
+  'gr.people': 'tavolo da {n} persone o più', 'gr.d.02-14': 'San Valentino', 'gr.d.12-31': 'Capodanno', 'gr.sat': 'sabato sera',
+  'bk.g.title': 'Garanzia della prenotazione',
+  'bk.g.why': 'Per questa prenotazione chiediamo una carta a garanzia: {r}.',
+  'bk.g.amt': 'Importo della garanzia: {a}', 'bk.g.amt.tbd': '[€ per persona — da decidere]',
+  'bk.g.cancel': 'Politica di cancellazione: {c}', 'bk.g.cancel.tbd': '[entro X ore — da decidere]', 'bk.g.cancel.set': 'cancellazione gratuita entro {h} ore',
+  'bk.g.submit': 'Conferma con garanzia', 'bk.g.err': 'Inserisci i dati della carta (finti, è una demo).',
+  'bk.done.t': 'Prenotazione ricevuta!', 'bk.done.sum': 'Tavolo per {p} · {d} · {t}',
+  'bk.done.guar': 'Garanzia: {a} — nessun addebito reale (demo).',
+  'bk.done.conf': 'Anteprima del messaggio di conferma', 'bk.done.rem': 'Promemoria automatico: {w}', 'bk.done.remw': '[24 ore / 3 ore prima — da decidere]',
+  'bk.done.cal': 'Aggiungi al calendario', 'bk.done.new': 'Nuova prenotazione',
+  'bk.done.demo': 'Anteprima: nessun messaggio è stato davvero inviato.',
+  'chan.sms': 'SMS', 'chan.wa': 'WhatsApp', 'chan.email': 'Email',
+  'persons.1': '{n} persona', 'persons.n': '{n} persone',
+  'msg.subject': 'Oggetto: Prenotazione confermata — Panì',
+  'msg.conf': "Ciao {name}! La tua prenotazione da Panì è confermata: {p}, {d} alle {t}. Ti aspettiamo in Viale America 13, Roma. Per cambiare o annullare chiama il +39 347 117 2963. [Testo da approvare con il locale]",
+  'msg.rem': "Ciao {name}, ti ricordiamo la tua prenotazione da Panì: {d} alle {t}, {p}. Se non puoi venire, avvisaci al +39 347 117 2963. A presto! [Testo da approvare con il locale]",
+  'ev.kicker': 'Festeggia con noi', 'ev.title': 'Eventi privati e gruppi',
+  'ev.lead': 'Compleanni, cene aziendali, lauree, aperitivi di gruppo: raccontaci cosa hai in mente e prepariamo una proposta.',
+  'ev.cap': '[Coperti interni / esterni]',
+  'ev.type': 'Tipo di evento',
+  'ev.t.birthday': 'Compleanno', 'ev.t.corporate': 'Cena aziendale', 'ev.t.ceremony': 'Comunione / battesimo', 'ev.t.graduation': 'Laurea', 'ev.t.aperitif': 'Aperitivo di gruppo', 'ev.t.other': 'Altro',
+  'ev.slot': 'Fascia oraria', 'ev.s.lunch': 'Pranzo', 'ev.s.aperitif': 'Aperitivo', 'ev.s.dinner': 'Cena',
+  'ev.budget': 'Budget a persona', 'ev.b.a': '[Fascia 1 — da definire]', 'ev.b.b': '[Fascia 2 — da definire]', 'ev.b.c': '[Fascia 3 — da definire]', 'ev.b.x': 'Da concordare',
+  'ev.format': 'Formula', 'ev.f.fixed': 'Menù fisso', 'ev.f.carte': 'Alla carta', 'ev.f.buffet': 'Aperitivo a buffet',
+  'ev.diet': 'Esigenze alimentari', 'ev.space': 'Spazio', 'ev.avail': '[disponibilità da confermare]',
+  'ev.sp.shared': 'Tavoli riservati', 'ev.sp.inside': 'Uso esclusivo del locale', 'ev.sp.deck': 'Uso esclusivo del dehors',
+  'ev.submit': 'Invia la richiesta',
+  'ev.done.t': 'Richiesta inviata!', 'ev.done.p': 'Grazie {name}! Ti ricontattiamo entro [24 ore].', 'ev.done.sum': '{type} · {d} · {p}', 'ev.done.new': 'Nuova richiesta',
+  'ev.done.demo': 'Anteprima: la richiesta non è stata inviata a nessuno.',
+  'gf.xmas': 'Natale da Panì: regala una cena, un aperitivo, una pausa pranzo. [Offerta natalizia da definire]',
+  'gf.kicker': 'Un regalo goloso', 'gf.title': 'Buoni regalo',
+  'gf.lead': "Scegli l'importo, scrivi due righe e invia il buono via email o WhatsApp, oppure stampalo.",
+  'gf.amount': 'Importo', 'gf.custom': 'Altro importo', 'gf.cuts': '[25 € / 50 € / 100 € — da confermare]', 'gf.customl': 'Importo libero (€)',
+  'gf.from': 'Da parte di', 'gf.to': 'Per', 'gf.msg': 'Messaggio', 'gf.deliver': 'Come lo invii?', 'gf.print': 'Stampa',
+  'gf.dest.email': 'Email del destinatario', 'gf.dest.wa': 'WhatsApp del destinatario', 'gf.buy': 'Acquista il buono (demo)',
+  'gf.preview': 'Anteprima del buono regalo', 'gf.v.label': 'Buono regalo', 'gf.v.to': 'Per', 'gf.v.from': 'Da parte di', 'gf.v.exp': 'Scadenza', 'gf.valid': '[validità — da decidere]',
+  'gf.ph.name': '[Nome]',
+  'gf.done.t': 'Buono creato!', 'gf.done.code': 'Codice',
+  'gf.done.email': 'Anteprima del messaggio via email', 'gf.done.wa': 'Anteprima del messaggio via WhatsApp', 'gf.done.print': 'Il buono è pronto da stampare qui sopra.',
+  'gf.done.printbtn': 'Stampa il buono', 'gf.done.new': 'Nuovo buono', 'gf.done.demo': 'Anteprima: nessun pagamento e nessun invio reale.',
+  'gf.err.dest': 'Inserisci un contatto valido',
+  'msg.gift': 'Ciao {to}! {from} ti regala un buono da {a} da spendere da Panì (Viale America 13, Roma). Codice: {code}. Scadenza: [validità — da decidere]. {m}',
+  'ab.kicker': 'Chi siamo', 'ab.title': 'Genuine food, atmosfera di casa',
+  'ab.story': '<span class="ph-note">[Storia del locale da raccontare dalla titolare]</span>',
+  'ab.fab.t': 'Fabiana',
+  'ab.fab.p': "è la titolare, e chi passa da Panì la ricorda per l'accoglienza. Lo staff sorridente e l'atmosfera di casa sono quello che le recensioni raccontano più spesso.",
+  'ab.fab.ok': '[Confermare se la titolare vuole comparire]',
+  'ab.phil.t': 'La filosofia "genuine food"',
+  'ab.phil.p': 'Panini gourmet con accostamenti ricercati, hamburger di carne di qualità, fritti croccanti e leggeri. <span class="ph-note">[Da dove vengono pane, carne e salumi — fornitori da confermare]</span>',
+  'ph.staff.alt': 'Il bancone con la titolare e lo staff che sorridono', 'ph.staff': '[Foto: il bancone con la titolare / lo staff]',
+  'ga.kicker': 'Un assaggio', 'ga.title': 'Galleria', 'ga.todo': '[Servizio fotografico da fare — descrizioni degli scatti qui sotto]',
+  'ph.deck.alt': "Dehors sulla pedana in legno con il verde del lago dietro, all'ora dell'aperitivo", 'ph.deck': "[Foto: dehors sulla pedana in legno con il verde del lago dietro, ora dell'aperitivo]",
+  'ph.burger.alt': "Burger con patatine visto dall'alto su un tagliere di legno", 'ph.burger': "[Foto: burger con patatine dall'alto, su tagliere di legno]",
+  'ph.suppli.alt': 'Supplì alla carbonara spezzato con il ripieno in vista', 'ph.suppli': '[Foto: supplì alla carbonara spezzato con il ripieno in vista]',
+  'ph.tagliere.alt': 'Tagliere di salumi e formaggi con un bicchiere di birra alla spina', 'ph.tagliere': '[Foto: tagliere salumi e formaggi con birra alla spina]',
+  'ph.sala.alt': 'Sala interna con i tavoli apparecchiati', 'ph.sala': '[Foto: sala interna, coperti apparecchiati]',
+  'ph.banco.alt': 'Il bancone del locale con la titolare e lo staff', 'ph.banco': '[Foto: il bancone con la titolare / lo staff]',
+  'rv.kicker': 'Dicono di noi', 'rv.title': 'Recensioni', 'rv.ta': 'TripAdvisor · circa 410 recensioni',
+  'rv.pick': '[Recensione Google da selezionare con il titolare]', 'rv.cta': 'Lascia una recensione', 'rv.link': '[Link alla scheda Google]',
+  'wh.kicker': 'Vieni a trovarci', 'wh.title': 'Dove siamo',
+  'wh.zone': "Quartiere EUR, a due passi dal Laghetto dell'EUR (Parco Centrale del Lago)",
+  'wh.hours': 'Orari', 'wh.hoursok': '[Orari da confermare]', 'wh.how': 'Come arrivare',
+  'wh.metro': '[Metro più vicina — verificare]', 'wh.park': '[Parcheggio]',
+  'wh.mf': 'Lunedì–Venerdì', 'wh.sat': 'Sabato', 'wh.sun': 'Domenica',
+  'wh.maptitle': 'Mappa: Panì Genuine Food, Viale America 13, Roma',
+  'ft.contacts': 'Contatti', 'ft.email': '[Email del locale]', 'ft.wa': '[Confermare che il numero WhatsApp sia questo]', 'ft.follow': 'Seguici',
+  'ft.rs': '[Ragione sociale]', 'ft.piva': '[P.IVA]', 'ft.demo': 'Anteprima — funzioni dimostrative',
+  'dock.label': 'Azioni rapide', 'dock.call': 'Chiama', 'dock.dir': 'Indicazioni',
+  'wa.msg': 'Ciao Panì! Vorrei informazioni (o prenotare un tavolo).',
+  'ck.title': 'Cookie', 'ck.text': 'Questo sito usa cookie tecnici e, per la mappa, servizi di terze parti. <span class="ph-note">[Testo legale da far verificare]</span>',
+  'ck.accept': 'Accetta', 'ck.min': 'Solo necessari', 'ck.manage': 'Gestisci cookie',
+  'toast.link': 'Link non ancora disponibile: va inserito con il titolare.',
+  'allg.verify': 'verifica'
+},
+en: {
+  'seo.title': 'Panì Genuine Food — Sandwiches, burgers, fried bites & beer | Viale America, EUR, Rome',
+  'seo.desc': 'Panì Genuine Food: gourmet sandwich shop, burgers and craft-style beer bar in EUR, Rome. Sandwiches, burgers, fried bites, aperitivo and dinner at Viale America 13, a short walk from the EUR lake. Book a table or order for pickup.',
+  'seo.og': 'Sandwiches, burgers, fried bites and beer by the EUR lake in Rome. Book a table or order for pickup.',
+  'skip': 'Skip to content',
+  'nav.label': 'Main menu', 'nav.toggle': 'Open the menu',
+  'nav.menu': 'Menu', 'nav.order': 'Order', 'nav.book': 'Book', 'nav.events': 'Events', 'nav.gift': 'Gift cards', 'nav.about': 'About us', 'nav.where': 'Find us',
+  'hdr.book': 'Book',
+  'hero.kicker': 'Gourmet sandwich shop · burgers · beer bar',
+  'hero.title': 'Sandwiches, burgers and fried bites. <em>Genuine, like home.</em>',
+  'hero.sub': 'Sandwiches, burgers, fried bites and beer by the EUR lake in Rome. For a lunch break, an aperitivo or dinner — open late.',
+  'hero.cta1': 'Book a table', 'hero.cta2': 'Order for pickup',
+  'hero.rate': 'on TripAdvisor · about 410 reviews',
+  'hero.google': '[Google rating and number of reviews]',
+  'open.on': 'Open now — closes at {t}', 'open.off': 'Closed — opens {w} at {t}',
+  'wd.today': 'today', 'wd.tomorrow': 'tomorrow', 'wd.on': 'on {d}',
+  'day.0': 'Sunday', 'day.1': 'Monday', 'day.2': 'Tuesday', 'day.3': 'Wednesday', 'day.4': 'Thursday', 'day.5': 'Friday', 'day.6': 'Saturday',
+  'ph.hero.alt': 'A gourmet sandwich cut in half in the foreground, the blurred counter behind it, warm light',
+  'ph.hero': '[Photo: gourmet sandwich cut in half in close-up, blurred counter in the background, warm light]',
+  'mo.kicker': 'One place', 'mo.title': 'Three ways to enjoy Panì',
+  'mo.lunch.t': 'Lunch break',
+  'mo.lunch.p': 'Sandwiches, burgers and fried bites to get away from the office: at the table, outside, or to take away and enjoy on the grass by the lake. Price range €.',
+  'mo.lunch.water': 'Free water for people who work in the EUR offices, Monday to Friday.',
+  'mo.lunch.cond': '[Conditions to be confirmed]', 'mo.lunch.cta': 'Order for pickup →',
+  'mo.aperi.t': 'Aperitivo',
+  'mo.aperi.p': 'Draught beer, a board of cured meats and cheese, and crunchy fried bites: aperitivo and apericena are among our guests\' favourites.',
+  'mo.aperi.cond': '[Aperitivo times and format to be confirmed]', 'mo.aperi.cta': 'See the menu →',
+  'mo.dinner.t': 'Dinner',
+  'mo.dinner.p': 'A relaxed, indulgent dinner with table service, indoors or outside on the wooden deck. Stay as late as you like.',
+  'mo.dinner.cond': '[Times to be confirmed]', 'mo.dinner.cta': 'Book a table →',
+  'sv.label': 'Services',
+  'sv.outdoor': 'Outdoor seating', 'sv.take': 'Takeaway', 'sv.deliv': 'Home delivery', 'sv.book': 'Reservations', 'sv.table': 'Table service',
+  'sv.alc': 'Alcohol served', 'sv.card': 'Credit cards accepted', 'sv.wifi': 'Free Wi-Fi', 'sv.access': 'Wheelchair accessible', 'sv.veg': 'Vegetarian and vegan options',
+  'menu.kicker': 'What we serve', 'menu.title': 'The menu',
+  'menu.lead': 'Gourmet sandwiches with inventive pairings, quality meat burgers with fries, crunchy fried bites, boards and draught beer.',
+  'menu.todo': '[Full menu and prices to be updated with the venue]',
+  'menu.filters': 'Menu filters', 'menu.cats': 'Menu categories',
+  'menu.f.v': 'Vegetarian', 'menu.f.vg': 'Vegan', 'menu.f.sg': 'Gluten-free', 'menu.f.excl': 'Exclude allergen…', 'menu.f.none': 'None',
+  'menu.sgwarn': '[To be checked with the venue: gluten-free dishes and cross-contamination risk]',
+  'menu.exclwarn': 'Dishes whose allergens are still to be confirmed stay visible and are flagged: always ask the staff.',
+  'menu.legend': 'Key: allergens and symbols',
+  'menu.l.v': 'vegetarian', 'menu.l.vg': 'vegan', 'menu.l.sg': 'gluten-free [to be checked]',
+  'menu.bom': 'Burger of the month',
+  'menu.price.tbd': '[Price — to be confirmed]', 'menu.allg.tbd': '[Allergens to be confirmed]',
+  'menu.noitems': 'No dishes match the selected filters.',
+  'menu.add': 'Add', 'menu.added': 'Added to your order: {n}',
+  'ord.kicker': 'From our counter to your break', 'ord.title': 'Order & pick up',
+  'ord.lead': 'Order directly from us rather than through delivery apps: choose your dishes, pay online or at pickup, and collect them at the time that suits you.',
+  'ord.deliv': '[Direct delivery: yes/no — to be decided]', 'ord.prices': '[More dishes can be ordered once prices are confirmed]',
+  'ord.catalog': 'Dishes you can order', 'ord.cart': 'Your order', 'ord.total': 'Total',
+  'ord.empty': 'Your basket is empty: add some dishes from the list.',
+  'ord.pickup': 'Pickup time', 'ord.pay': 'Payment', 'ord.pay.online': 'Online (simulated)', 'ord.pay.pickup': 'At pickup',
+  'ord.confirm': 'Confirm order',
+  'ord.day.hint': 'Pickup {w}', 'ord.noslots': 'No pickup times available in the next few days.',
+  'ord.err.empty': 'Add at least one dish.',
+  'ord.done.t': 'Order received!', 'ord.done.num': 'Order number', 'ord.done.pick': 'Pickup: {w} at {t}',
+  'ord.done.payo': 'Online payment: simulated, nothing was charged.', 'ord.done.payp': 'Pay at pickup.',
+  'ord.done.demo': 'Preview: this order has not been sent to anyone.', 'ord.new': 'New order',
+  'f.name': 'Name', 'f.phone': 'Phone', 'f.email': 'Email', 'f.date': 'Date', 'f.time': 'Time', 'f.people': 'Guests', 'f.notes': 'Notes',
+  'f.choose': 'Choose…', 'f.back': 'Back', 'f.exp': 'Expiry', 'f.cvc': 'CVC',
+  'f.cardfake': 'Card (fake — no real data)',
+  'f.demo': 'Demo: no payment is made and no data is saved.',
+  'err.req': 'Required field', 'err.email': 'Invalid email', 'err.phone': 'Invalid phone number',
+  'err.people': 'Enter a valid number', 'err.time': 'Choose a time', 'err.amount': 'Invalid amount (€5–500)',
+  'bk.kicker': 'A table is waiting', 'bk.title': 'Book a table',
+  'bk.lead': 'Pick a day, a time and the number of guests. We confirm right away, on the channel you prefer.',
+  'bk.channel': 'Where would you like confirmation and reminders?',
+  'bk.notes': 'Notes (allergies, high chair, outdoor table…)',
+  'bk.nocomm': 'Booking here means the restaurant pays no commission.',
+  'bk.submit': 'Book',
+  'bk.noslots': 'No times available on this day: please pick another day.',
+  'bk.open': 'Open from {o} to {c}',
+  'bk.s1': 'Details', 'bk.s2': 'Guarantee', 'bk.s3': 'Confirmation',
+  'bk.guar.hint': 'This booking needs a card as a guarantee ({r}). Nothing is charged in this demo.',
+  'gr.people': 'tables of {n} guests or more', 'gr.d.02-14': "Valentine's Day", 'gr.d.12-31': "New Year's Eve", 'gr.sat': 'Saturday evening',
+  'bk.g.title': 'Booking guarantee',
+  'bk.g.why': 'This booking needs a card as a guarantee: {r}.',
+  'bk.g.amt': 'Guarantee amount: {a}', 'bk.g.amt.tbd': '[€ per person — to be decided]',
+  'bk.g.cancel': 'Cancellation policy: {c}', 'bk.g.cancel.tbd': '[up to X hours before — to be decided]', 'bk.g.cancel.set': 'free cancellation up to {h} hours before',
+  'bk.g.submit': 'Confirm with guarantee', 'bk.g.err': 'Enter the card details (fake ones, this is a demo).',
+  'bk.done.t': 'Booking received!', 'bk.done.sum': 'Table for {p} · {d} · {t}',
+  'bk.done.guar': 'Guarantee: {a} — nothing is really charged (demo).',
+  'bk.done.conf': 'Preview of the confirmation message', 'bk.done.rem': 'Automatic reminder: {w}', 'bk.done.remw': '[24 hours / 3 hours before — to be decided]',
+  'bk.done.cal': 'Add to calendar', 'bk.done.new': 'New booking',
+  'bk.done.demo': 'Preview: no message was actually sent.',
+  'chan.sms': 'SMS', 'chan.wa': 'WhatsApp', 'chan.email': 'Email',
+  'persons.1': '{n} guest', 'persons.n': '{n} guests',
+  'msg.subject': 'Subject: Booking confirmed — Panì',
+  'msg.conf': 'Hi {name}! Your booking at Panì is confirmed: {p}, {d} at {t}. We look forward to seeing you at Viale America 13, Rome. To change or cancel, call +39 347 117 2963. [Text to be approved with the venue]',
+  'msg.rem': 'Hi {name}, a reminder of your booking at Panì: {d} at {t}, {p}. If you can\'t make it, let us know on +39 347 117 2963. See you soon! [Text to be approved with the venue]',
+  'ev.kicker': 'Celebrate with us', 'ev.title': 'Private events & groups',
+  'ev.lead': 'Birthdays, company dinners, graduations, group aperitivos: tell us what you have in mind and we will prepare a proposal.',
+  'ev.cap': '[Indoor / outdoor seats]',
+  'ev.type': 'Type of event',
+  'ev.t.birthday': 'Birthday', 'ev.t.corporate': 'Company dinner', 'ev.t.ceremony': 'Communion / christening', 'ev.t.graduation': 'Graduation', 'ev.t.aperitif': 'Group aperitivo', 'ev.t.other': 'Other',
+  'ev.slot': 'Time of day', 'ev.s.lunch': 'Lunch', 'ev.s.aperitif': 'Aperitivo', 'ev.s.dinner': 'Dinner',
+  'ev.budget': 'Budget per person', 'ev.b.a': '[Band 1 — to be defined]', 'ev.b.b': '[Band 2 — to be defined]', 'ev.b.c': '[Band 3 — to be defined]', 'ev.b.x': 'To be agreed',
+  'ev.format': 'Format', 'ev.f.fixed': 'Set menu', 'ev.f.carte': 'À la carte', 'ev.f.buffet': 'Buffet aperitivo',
+  'ev.diet': 'Dietary needs', 'ev.space': 'Space', 'ev.avail': '[availability to be confirmed]',
+  'ev.sp.shared': 'Reserved tables', 'ev.sp.inside': 'Exclusive use of the venue', 'ev.sp.deck': 'Exclusive use of the outdoor deck',
+  'ev.submit': 'Send the request',
+  'ev.done.t': 'Request sent!', 'ev.done.p': 'Thank you {name}! We will get back to you within [24 hours].', 'ev.done.sum': '{type} · {d} · {p}', 'ev.done.new': 'New request',
+  'ev.done.demo': 'Preview: the request has not been sent to anyone.',
+  'gf.xmas': 'Christmas at Panì: give a dinner, an aperitivo, a lunch break. [Christmas offer to be defined]',
+  'gf.kicker': 'A delicious gift', 'gf.title': 'Gift cards',
+  'gf.lead': 'Choose the amount, write a few words and send the card by email or WhatsApp, or print it.',
+  'gf.amount': 'Amount', 'gf.custom': 'Other amount', 'gf.cuts': '[€25 / €50 / €100 — to be confirmed]', 'gf.customl': 'Custom amount (€)',
+  'gf.from': 'From', 'gf.to': 'To', 'gf.msg': 'Message', 'gf.deliver': 'How do you want to send it?', 'gf.print': 'Print',
+  'gf.dest.email': "Recipient's email", 'gf.dest.wa': "Recipient's WhatsApp", 'gf.buy': 'Buy the gift card (demo)',
+  'gf.preview': 'Gift card preview', 'gf.v.label': 'Gift card', 'gf.v.to': 'To', 'gf.v.from': 'From', 'gf.v.exp': 'Expires', 'gf.valid': '[validity — to be decided]',
+  'gf.ph.name': '[Name]',
+  'gf.done.t': 'Gift card created!', 'gf.done.code': 'Code',
+  'gf.done.email': 'Preview of the email message', 'gf.done.wa': 'Preview of the WhatsApp message', 'gf.done.print': 'The gift card is ready to print, above.',
+  'gf.done.printbtn': 'Print the gift card', 'gf.done.new': 'New gift card', 'gf.done.demo': 'Preview: no real payment or delivery.',
+  'gf.err.dest': 'Enter a valid contact',
+  'msg.gift': 'Hi {to}! {from} is giving you a {a} gift card to spend at Panì (Viale America 13, Rome). Code: {code}. Expires: [validity — to be decided]. {m}',
+  'ab.kicker': 'About us', 'ab.title': 'Genuine food, a home-from-home feel',
+  'ab.story': '<span class="ph-note">[Venue story to be told by the owner]</span>',
+  'ab.fab.t': 'Fabiana',
+  'ab.fab.p': 'is the owner, and people who visit Panì remember her warm welcome. The smiling staff and the home-like atmosphere are what reviews mention most often.',
+  'ab.fab.ok': '[Confirm whether the owner wants to appear]',
+  'ab.phil.t': 'The "genuine food" philosophy',
+  'ab.phil.p': 'Gourmet sandwiches with inventive pairings, quality meat burgers, crisp and light fried bites. <span class="ph-note">[Where the bread, meat and cured meats come from — suppliers to be confirmed]</span>',
+  'ph.staff.alt': 'The counter with the owner and the smiling staff', 'ph.staff': '[Photo: the counter with the owner / the staff]',
+  'ga.kicker': 'A taste of it', 'ga.title': 'Gallery', 'ga.todo': '[Photo shoot to be done — shot descriptions below]',
+  'ph.deck.alt': 'The outdoor deck on the wooden platform with the green of the lake behind, at aperitivo time', 'ph.deck': '[Photo: outdoor deck on the wooden platform with the green of the lake behind, aperitivo hour]',
+  'ph.burger.alt': 'A burger with fries seen from above on a wooden board', 'ph.burger': '[Photo: burger with fries from above, on a wooden board]',
+  'ph.suppli.alt': 'A carbonara supplì broken open to show the filling', 'ph.suppli': '[Photo: carbonara supplì broken open, filling on show]',
+  'ph.tagliere.alt': 'A board of cured meats and cheeses with a glass of draught beer', 'ph.tagliere': '[Photo: cured meats and cheese board with draught beer]',
+  'ph.sala.alt': 'The dining room with the tables laid', 'ph.sala': '[Photo: dining room, tables laid]',
+  'ph.banco.alt': 'The venue counter with the owner and the staff', 'ph.banco': '[Photo: the counter with the owner / the staff]',
+  'rv.kicker': 'What people say', 'rv.title': 'Reviews', 'rv.ta': 'TripAdvisor · about 410 reviews',
+  'rv.pick': '[Google review to be chosen with the owner]', 'rv.cta': 'Leave a review', 'rv.link': '[Link to the Google listing]',
+  'wh.kicker': 'Come and see us', 'wh.title': 'Find us',
+  'wh.zone': 'EUR district, a short walk from the EUR lake (Parco Centrale del Lago)',
+  'wh.hours': 'Opening hours', 'wh.hoursok': '[Hours to be confirmed]', 'wh.how': 'Getting here',
+  'wh.metro': '[Nearest metro — to be checked]', 'wh.park': '[Parking]',
+  'wh.mf': 'Monday–Friday', 'wh.sat': 'Saturday', 'wh.sun': 'Sunday',
+  'wh.maptitle': 'Map: Panì Genuine Food, Viale America 13, Rome',
+  'ft.contacts': 'Contact', 'ft.email': '[Venue email]', 'ft.wa': '[Confirm that this is the WhatsApp number]', 'ft.follow': 'Follow us',
+  'ft.rs': '[Company name]', 'ft.piva': '[VAT number]', 'ft.demo': 'Preview — demo features',
+  'dock.label': 'Quick actions', 'dock.call': 'Call', 'dock.dir': 'Directions',
+  'wa.msg': 'Hi Panì! I would like some information (or to book a table).',
+  'ck.title': 'Cookies', 'ck.text': 'This site uses technical cookies and, for the map, third-party services. <span class="ph-note">[Legal text to be checked]</span>',
+  'ck.accept': 'Accept', 'ck.min': 'Necessary only', 'ck.manage': 'Manage cookies',
+  'toast.link': 'Link not available yet: to be added with the owner.',
+  'allg.verify': 'check'
+}
+};
+</script>
+<script>
+/* =====================================================================
+   4) LOGICA — tutte le funzioni sono SIMULATE (nessun backend, nessun pagamento)
+   ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const pad = n => String(n).padStart(2, '0');
+const toMin = hm => { const [h, m] = hm.split(':').map(Number); return h * 60 + m; };
+const fromMin = m => pad(Math.floor(m / 60)) + ':' + pad(m % 60);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage non disponibile: si continua senza */ } }
+};
+const params = new URLSearchParams(location.search);
+let lang = 'it';
+
+const t = (k, v) => {
+  let s = I18N[lang] && I18N[lang][k];
+  if (s == null) s = I18N.it[k];
+  if (s == null) s = k;
+  return v ? s.replace(/\{(\w+)\}/g, (m, x) => (v[x] != null ? v[x] : m)) : s;
+};
+const L = x => (Array.isArray(x) ? x[lang === 'it' ? 0 : 1] : x);
+// evidenzia i [segnaposto] nel testo (già escapato)
+const ph = s => esc(s).replace(/\[[^\]]+\]/g, m => '<span class="ph-note">' + m + '</span>');
+const fmtEUR = n => new Intl.NumberFormat(lang === 'it' ? 'it-IT' : 'en-GB', { style: 'currency', currency: 'EUR' }).format(n);
+const persons = n => t(n === 1 ? 'persons.1' : 'persons.n', { n });
+const locale = () => (lang === 'it' ? 'it-IT' : 'en-GB');
+const fmtDate = ds => { const [y, m, d] = ds.split('-').map(Number); return new Intl.DateTimeFormat(locale(), { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(y, m - 1, d)); };
+const dateStr = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+function toast(msg) {
+  const el = $('#toast'); el.textContent = msg; el.classList.add('on');
+  clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), 3200);
+}
+
+/* ---------- ora di Roma (per "Aperto ora" e slot) ---------- */
+function mkNow(y, mo, d, h, mi) { return { y, mo, d, h, mi, date: new Date(y, mo - 1, d), min: h * 60 + mi }; }
+function nowRome() {
+  const dbg = params.get('now'); // prova: ?now=2026-10-24T12:00
+  const m = dbg && dbg.match(/^(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d)$/);
+  if (m) return mkNow(+m[1], +m[2], +m[3], +m[4], +m[5]);
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+  const g = {}; parts.forEach(p => { g[p.type] = p.value; });
+  return mkNow(+g.year, +g.month, +g.day, +g.hour, +g.minute);
+}
+// slot per un giorno (Date locale a mezzanotte)
+function genSlots(day, step, leadMin, lastBefore) {
+  const now = nowRome();
+  const [o, c] = CONFIG.hours[day.getDay()];
+  const out = [], today = dateStr(day) === dateStr(now.date);
+  for (let m = toMin(o); m <= toMin(c) - lastBefore; m += step) { if (today && m < now.min + leadMin) continue; out.push(m); }
+  return out;
+}
+const dayLabel = (day, now) => {
+  const diff = Math.round((day - now.date) / 864e5);
+  return diff === 0 ? t('wd.today') : diff === 1 ? t('wd.tomorrow') : t('wd.on', { d: t('day.' + day.getDay()) });
+};
+
+/* ---------- aperto / chiuso + orari ---------- */
+function renderOpen() {
+  const n = nowRome(), wd = n.date.getDay(), [o, c] = CONFIG.hours[wd];
+  const box = $('#openStatus');
+  if (n.min >= toMin(o) && n.min < toMin(c)) {
+    box.className = 'status on'; $('#openText').textContent = t('open.on', { t: c });
+  } else {
+    let i = n.min < toMin(o) ? 0 : 1;
+    const day = new Date(n.y, n.mo - 1, n.d + i);
+    box.className = 'status off';
+    $('#openText').textContent = t('open.off', { w: dayLabel(day, n), t: CONFIG.hours[day.getDay()][0] });
+  }
+}
+function renderHours() {
+  const today = nowRome().date.getDay();
+  $('#hoursTable').innerHTML = CONFIG.hourGroups.map(g => {
+    const [o, c] = CONFIG.hours[g.days[0]];
+    return `<tr class="${g.days.includes(today) ? 'today' : ''}"><th scope="row">${esc(t(g.k))}</th><td>${o}–${c}</td></tr>`;
+  }).join('');
+  $('#ftHours').innerHTML = CONFIG.hourGroups.map(g => { const [o, c] = CONFIG.hours[g.days[0]]; return `${esc(t(g.k))}: ${o}–${c}`; }).join('<br>');
+}
+
+/* ---------- menù ---------- */
+const mState = { cat: MENU.categories[0].id, f: { V: false, VG: false, SG: false }, excl: '' };
+const allItems = () => MENU.categories.flatMap(c => c.items.map(i => Object.assign({ cat: c.id }, i)));
+function itemMatches(it) {
+  const f = mState.f;
+  if (f.VG && !it.t.includes('VG')) return false;
+  if (f.V && !(it.t.includes('V') || it.t.includes('VG'))) return false;
+  if (f.SG && !it.t.includes('SG')) return false;
+  if (mState.excl && it.a && it.a.includes(mState.excl)) return false;
+  return true;
+}
+function itemHTML(it) {
+  const price = it.p != null ? `<span class="price">${fmtEUR(it.p)}${it.o ? '*' : ''}</span>` : `<span class="price">${ph(t('menu.price.tbd'))}</span>`;
+  const bd = (it.t.includes('V') || it.t.includes('VG') ? '<span class="bd" title="' + esc(t('menu.l.v')) + '">V</span>' : '') +
+             (it.t.includes('VG') ? '<span class="bd vg" title="' + esc(t('menu.l.vg')) + '">VG</span>' : '') +
+             (it.t.includes('SG') ? '<span class="bd sg" title="' + esc(t('menu.l.sg')) + '">SG</span>' : '');
+  const al = it.a ? it.a.map(k => `<span title="${esc(L(ALLERGENS[k].n))}"><span aria-hidden="true">${ALLERGENS[k].e}</span><span class="sr">${esc(L(ALLERGENS[k].n))}</span></span>`).join('')
+                  : ph(t('menu.allg.tbd'));
+  const warn = mState.excl && !it.a ? ` <span class="bd" style="background:#7A5A00">${esc(t('allg.verify'))}</span>` : '';
+  const tour = lang === 'en' && it.x ? `<p class="tourist">${esc(it.x)}</p>` : '';
+  const add = it.p != null ? `<button class="btn btn-green btn-sm" type="button" data-add="${it.id}">+ ${esc(t('menu.add'))}</button>` : '';
+  const known = it.p != null;
+  return `<article class="it"><div class="it-h"><h4>${ph(L(it.n))}</h4>${known ? price : ''}</div>${bd ? `<div class="badges">${bd}</div>` : ''}
+    <p>${ph(L(it.d))}</p>${tour}${known ? '' : `<p class="price" style="font-size:.9rem">${ph(t('menu.price.tbd'))}</p>`}<div class="it-f"><div class="allg">${al}${warn}</div>${add}</div></article>`;
+}
+function renderMenu() {
+  // box burger del mese
+  const b = MENU.burgerOfMonth;
+  $('#botm').innerHTML = `<p class="kicker">${esc(t('menu.bom'))}</p><h3>${ph(L(b.n))}</h3><p>${ph(L(b.d))} · ${b.p != null ? fmtEUR(b.p) : ph(t('menu.price.tbd'))}</p>`;
+  // tab
+  const tabs = $('#mtabs');
+  tabs.innerHTML = MENU.categories.map(c => `<button class="tab" role="tab" type="button" id="tab-${c.id}" data-cat="${c.id}" aria-selected="${c.id === mState.cat}" aria-controls="mpanel" tabindex="${c.id === mState.cat ? 0 : -1}">${esc(L(c.n))}</button>`).join('');
+  const diet = mState.f.V || mState.f.VG || mState.f.SG;
+  let html = '';
+  if (diet) {
+    MENU.categories.forEach(c => {
+      const its = c.items.filter(itemMatches);
+      if (its.length) html += `<h3 style="margin-top:20px">${esc(L(c.n))}</h3><div class="items">${its.map(itemHTML).join('')}</div>`;
+    });
+  } else {
+    const c = MENU.categories.find(x => x.id === mState.cat);
+    const its = c.items.filter(itemMatches);
+    html = (c.note ? `<p class="hint" style="margin-top:12px">${ph(L(c.note))}</p>` : '') + `<div class="items">${its.map(itemHTML).join('')}</div>`;
+    if (!its.length) html = `<p class="empty">${esc(t('menu.noitems'))}</p>`;
+  }
+  $('#mpanel').innerHTML = html || `<p class="empty">${esc(t('menu.noitems'))}</p>`;
+  diet ? $('#mpanel').removeAttribute('aria-labelledby') : $('#mpanel').setAttribute('aria-labelledby', 'tab-' + mState.cat);
+  $('#sgWarn').hidden = !mState.f.SG;
+  $('#exclWarn').hidden = !mState.excl;
+  tabs.style.opacity = diet ? .45 : 1;
+}
+function renderAllergenUI() {
+  const sel = $('#exclAllergen'), cur = mState.excl;
+  sel.innerHTML = `<option value="">${esc(t('menu.f.none'))}</option>` + Object.keys(ALLERGENS).map(k => `<option value="${k}">${ALLERGENS[k].e} ${esc(L(ALLERGENS[k].n))}</option>`).join('');
+  sel.value = cur;
+  $('#legendList').innerHTML = Object.keys(ALLERGENS).map(k => `<li><span aria-hidden="true">${ALLERGENS[k].e}</span> ${esc(L(ALLERGENS[k].n))}</li>`).join('');
+}
+function menuJSONLD() {
+  // Markup schema.org Menu. I prezzi del 2015 (o:true) NON vengono pubblicati nei dati strutturati.
+  const data = {
+    '@context': 'https://schema.org', '@type': 'Menu', '@id': '#menu-jsonld', name: 'Menù Panì Genuine Food', inLanguage: 'it',
+    hasMenuSection: MENU.categories.map(c => ({
+      '@type': 'MenuSection', name: c.n[0],
+      hasMenuItem: c.items.filter(i => !i.ph).map(i => {
+        const o = { '@type': 'MenuItem', name: Array.isArray(i.n) ? i.n[0] : i.n, description: i.d[0] };
+        if (i.t.includes('V')) o.suitableForDiet = 'https://schema.org/VegetarianDiet';
+        if (i.t.includes('VG')) o.suitableForDiet = 'https://schema.org/VeganDiet';
+        if (i.p != null && !i.o) o.offers = { '@type': 'Offer', price: i.p.toFixed(2), priceCurrency: 'EUR' };
+        return o;
+      })
+    }))
+  };
+  const s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'menu-jsonld'; s.textContent = JSON.stringify(data);
+  document.head.appendChild(s);
+}
+document.addEventListener('click', e => {
+  const tab = e.target.closest('[data-cat]');
+  if (tab) { mState.cat = tab.dataset.cat; renderMenu(); $('#tab-' + mState.cat).focus(); return; }
+  const f = e.target.closest('[data-filter]');
+  if (f) { mState.f[f.dataset.filter] = f.getAttribute('aria-pressed') !== 'true'; if (f.dataset.filter === 'VG' && mState.f.VG) mState.f.V = false; syncFilterButtons(); renderMenu(); return; }
+  const a = e.target.closest('[data-add]');
+  if (a) { const it = allItems().find(i => i.id === a.dataset.add); cart[it.id] = (cart[it.id] || 0) + 1; renderCart(); toast(t('menu.added', { n: L(it.n) })); }
+});
+function syncFilterButtons() { $$('[data-filter]').forEach(b => b.setAttribute('aria-pressed', String(!!mState.f[b.dataset.filter]))); }
+$('#mtabs').addEventListener('keydown', e => {
+  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+  const ids = MENU.categories.map(c => c.id); let i = ids.indexOf(mState.cat);
+  i = (i + (e.key === 'ArrowRight' ? 1 : -1) + ids.length) % ids.length; mState.cat = ids[i]; renderMenu(); $('#tab-' + mState.cat).focus(); e.preventDefault();
+});
+$('#exclAllergen').addEventListener('change', e => { mState.excl = e.target.value; renderMenu(); });
+
+/* ---------- ordina e ritira ---------- */
+const cart = {};
+function renderCatalog() {
+  const orderable = MENU.categories.map(c => ({ c, its: c.items.filter(i => i.p != null) })).filter(g => g.its.length);
+  $('#catalog').innerHTML = orderable.map(g => `<div class="ogroup"><h4>${esc(L(g.c.n))}</h4>` + g.its.map(i => `
+    <div class="orow"><div><strong>${ph(L(i.n))}</strong>${i.o ? '*' : ''}<small>${ph(L(i.d))}</small><span class="oprice">${fmtEUR(i.p)}</span></div>
+    <div class="qty"><button type="button" data-q="-1" data-id="${i.id}" aria-label="−1 ${esc(L(i.n))}">−</button><span aria-live="polite" id="q-${i.id}">${cart[i.id] || 0}</span><button type="button" data-q="1" data-id="${i.id}" aria-label="+1 ${esc(L(i.n))}">+</button></div></div>`).join('') + '</div>').join('') +
+    `<p class="hint" style="color:#CDBFB4">${ph(L(MENU.categories[0].note))}</p>`;
+}
+$('#catalog').addEventListener('click', e => {
+  const b = e.target.closest('[data-q]'); if (!b) return;
+  const id = b.dataset.id; cart[id] = Math.max(0, (cart[id] || 0) + Number(b.dataset.q)); if (!cart[id]) delete cart[id];
+  const q = $('#q-' + id); if (q) q.textContent = cart[id] || 0; renderCart();
+});
+function cartTotal() { const m = {}; allItems().forEach(i => { m[i.id] = i; }); return Object.keys(cart).reduce((s, id) => s + m[id].p * cart[id], 0); }
+function renderCart() {
+  const m = {}; allItems().forEach(i => { m[i.id] = i; });
+  const ids = Object.keys(cart);
+  $('#cartLines').innerHTML = ids.length ? ids.map(id => `<div class="cline"><span>${cart[id]} × ${esc(L(m[id].n))}</span><span>${fmtEUR(m[id].p * cart[id])}</span></div>`).join('') : `<p class="muted">${esc(t('ord.empty'))}</p>`;
+  $('#cartTotal').textContent = fmtEUR(cartTotal());
+}
+let pickupDay = null;
+function renderPickup() {
+  const now = nowRome(), sel = $('#oTime'), cur = sel.value; let slots = [], day = null;
+  for (let i = 0; i < 8 && !slots.length; i++) {
+    day = new Date(now.y, now.mo - 1, now.d + i);
+    slots = genSlots(day, CONFIG.pickup.slotMinutes, CONFIG.pickup.prepMinutes, CONFIG.pickup.lastBeforeClose);
+  }
+  pickupDay = slots.length ? day : null;
+  sel.innerHTML = slots.length ? slots.map(m => `<option value="${fromMin(m)}">${fromMin(m)}</option>`).join('') : `<option value="">—</option>`;
+  if (cur && slots.includes(toMin(cur))) sel.value = cur;
+  $('#oDayHint').textContent = slots.length ? t('ord.day.hint', { w: dayLabel(day, now) }) : t('ord.noslots');
+}
+$$('input[name=oPay]').forEach(r => r.addEventListener('change', () => { $('#oCard').hidden = $('input[name=oPay]:checked').value !== 'online'; }));
+const setErr = (id, msg) => { const e = $(`[data-err="${id}"]`); if (e) e.textContent = msg || ''; const f = $('#' + id); if (f) f.setAttribute('aria-invalid', msg ? 'true' : 'false'); return !msg; };
+const okPhone = v => v.replace(/\D/g, '').length >= 6;
+const okEmail = v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+$('#orderForm').addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true;
+  ok = setErr('oName', $('#oName').value.trim() ? '' : t('err.req')) && ok;
+  ok = setErr('oPhone', okPhone($('#oPhone').value) ? '' : t('err.phone')) && ok;
+  if (!Object.keys(cart).length) { toast(t('ord.err.empty')); ok = false; }
+  if (!$('#oTime').value) ok = false;
+  if (!ok) return;
+  const num = 'PN-' + Math.floor(1000 + Math.random() * 9000), pay = $('input[name=oPay]:checked').value;
+  const m = {}; allItems().forEach(i => { m[i.id] = i; });
+  const lines = Object.keys(cart).map(id => `<div class="cline"><span>${cart[id]} × ${esc(L(m[id].n))}</span><span>${fmtEUR(m[id].p * cart[id])}</span></div>`).join('');
+  $('#orderDone').innerHTML = `<div class="okmark" aria-hidden="true">✓</div><h3>${esc(t('ord.done.t'))}</h3>
+    <p><strong>${esc(t('ord.done.num'))}: ${num}</strong><br>${esc(t('ord.done.pick', { w: dayLabel(pickupDay, nowRome()), t: $('#oTime').value }))}</p>${lines}
+    <div class="total"><span>${esc(t('ord.total'))}</span><span>${fmtEUR(cartTotal())}</span></div>
+    <p>${esc(t(pay === 'online' ? 'ord.done.payo' : 'ord.done.payp'))}</p><p class="hint">${esc(t('ord.done.demo'))}</p>
+    <button class="btn btn-ghost" type="button" id="orderNew" style="color:var(--bord)">${esc(t('ord.new'))}</button>`;
+  $('#orderDone').hidden = false; $('#orderForm').hidden = true; $('#cartLines').parentElement.querySelector('.total').hidden = true; $('#cartLines').hidden = true;
+  $('#orderPanel h3').hidden = true; $('#orderDone').focus && $('#orderDone').scrollIntoView({ block: 'nearest' });
+  $('#orderNew').addEventListener('click', () => {
+    Object.keys(cart).forEach(k => delete cart[k]); $('#orderForm').reset(); $('#orderForm').hidden = false; $('#orderDone').hidden = true;
+    $('#cartLines').hidden = false; $('#cartLines').parentElement.querySelector('.total').hidden = false; $('#orderPanel h3').hidden = false; $('#oCard').hidden = false;
+    renderCatalog(); renderCart(); renderPickup();
+  });
+});
+
+/* ---------- prenotazione ---------- */
+const bk = { need: false, reasons: [], data: null };
+function guaranteeReasons(ds, time, people) {
+  const g = CONFIG.guarantee, r = []; if (!ds) return r;
+  const [y, m, d] = ds.split('-').map(Number);
+  if (people >= g.minPeople) r.push(t('gr.people', { n: g.minPeople }));
+  const key = pad(m) + '-' + pad(d); if (g.dates.includes(key)) r.push(t('gr.d.' + key));
+  if (g.saturdayEvening && new Date(y, m - 1, d).getDay() === 6 && time && toMin(time) >= toMin(g.saturdayEveningFrom)) r.push(t('gr.sat'));
+  return r;
+}
+function renderBookTimes() {
+  const ds = $('#bDate').value, sel = $('#bTime'), cur = sel.value; if (!ds) return;
+  const [y, m, d] = ds.split('-').map(Number), day = new Date(y, m - 1, d);
+  const slots = genSlots(day, CONFIG.booking.slotMinutes, CONFIG.booking.minLeadMinutes, CONFIG.booking.lastSlotBeforeClose);
+  sel.innerHTML = slots.length ? slots.map(x => `<option value="${fromMin(x)}">${fromMin(x)}</option>`).join('') : '<option value="">—</option>';
+  if (cur && slots.includes(toMin(cur))) sel.value = cur;
+  const [o, c] = CONFIG.hours[day.getDay()];
+  $('#bTimeHint').textContent = slots.length ? t('bk.open', { o, c }) : t('bk.noslots');
+  refreshGuarHint();
+}
+function refreshGuarHint() {
+  const r = guaranteeReasons($('#bDate').value, $('#bTime').value, Number($('#bPeople').value));
+  const box = $('#bGuar'); box.hidden = !r.length; if (r.length) box.textContent = t('bk.guar.hint', { r: r.join(', ') });
+}
+function renderSteps(cur) {
+  const names = bk.need ? ['bk.s1', 'bk.s2', 'bk.s3'] : ['bk.s1', 'bk.s3'];
+  $('#bkSteps').innerHTML = names.map((k, i) => `<li ${i === cur ? 'aria-current="step"' : ''}>${i + 1}. ${esc(t(k))}</li>`).join('');
+}
+['bDate', 'bTime', 'bPeople'].forEach(id => $('#' + id).addEventListener('change', () => { id === 'bDate' ? renderBookTimes() : refreshGuarHint(); }));
+$('#bPeople').addEventListener('input', refreshGuarHint);
+function validateBook() {
+  let ok = true;
+  ok = setErr('bDate', $('#bDate').value ? '' : t('err.req')) && ok;
+  if (!$('#bTime').value) { $('#bTimeHint').textContent = t('bk.noslots'); ok = false; }
+  const p = Number($('#bPeople').value); ok = setErr('bPeople', p >= 1 && p <= 40 ? '' : t('err.people')) && ok;
+  ok = setErr('bName', $('#bName').value.trim() ? '' : t('err.req')) && ok;
+  ok = setErr('bPhone', okPhone($('#bPhone').value) ? '' : t('err.phone')) && ok;
+  const ch = $('input[name=bChan]:checked').value, em = $('#bEmail').value.trim();
+  ok = setErr('bEmail', (ch === 'email' && !em) ? t('err.req') : (em && !okEmail(em) ? t('err.email') : '')) && ok;
+  return ok;
+}
+function amountText() { const a = CONFIG.guarantee.depositPerPerson; return a != null ? fmtEUR(a) + (lang === 'it' ? ' a persona' : ' per person') : t('bk.g.amt.tbd'); }
+function cancelText() { const h = CONFIG.guarantee.cancelHours; return h != null ? t('bk.g.cancel.set', { h }) : t('bk.g.cancel.tbd'); }
+$('#bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  if (!$('#bkStep2').hidden) {   // passo 2: garanzia
+    if (($('#bCard').value.replace(/\D/g, '').length < 8)) { toast(t('bk.g.err')); return; }
+    return finishBooking();
+  }
+  if (!validateBook()) return;
+  bk.reasons = guaranteeReasons($('#bDate').value, $('#bTime').value, Number($('#bPeople').value));
+  bk.need = bk.reasons.length > 0;
+  if (bk.need) {
+    $('#bkWhy').innerHTML = ph(t('bk.g.why', { r: bk.reasons.join(', ') }));
+    $('#bkTerms').innerHTML = `<li>${ph(t('bk.g.amt', { a: amountText() }))}</li><li>${ph(t('bk.g.cancel', { c: cancelText() }))}</li>`;
+    $('#bkStep1').hidden = true; $('#bkStep2').hidden = false; renderSteps(1); $('#bkStep2').scrollIntoView({ block: 'nearest' });
+  } else finishBooking();
+});
+$('#bkBack').addEventListener('click', () => { $('#bkStep2').hidden = true; $('#bkStep1').hidden = false; bk.need = false; renderSteps(0); });
+function bookMessages(b) {
+  const v = { name: b.name, p: persons(b.people), d: fmtDate(b.date), t: b.time };
+  const subj = b.chan === 'email' ? t('msg.subject') + '\n\n' : '';
+  const cls = b.chan === 'sms' ? 'sms' : b.chan === 'email' ? 'mail' : '';
+  const label = t('chan.' + b.chan);
+  return `<p class="chan">${esc(label)} · ${esc(t('bk.done.conf'))}</p><div class="bubble ${cls}">${ph(subj + t('msg.conf', v))}</div>
+    <p class="chan">${esc(label)} · ${ph(t('bk.done.rem', { w: t('bk.done.remw') }))}</p><div class="bubble ${cls}">${ph(subj + t('msg.rem', v))}</div>`;
+}
+function finishBooking() {
+  const b = { date: $('#bDate').value, time: $('#bTime').value, people: Number($('#bPeople').value), name: $('#bName').value.trim(), chan: $('input[name=bChan]:checked').value };
+  bk.data = b; renderSteps(bk.need ? 2 : 1);
+  $('#bkDone').innerHTML = `<div class="okmark" aria-hidden="true">✓</div><h3>${esc(t('bk.done.t'))}</h3>
+    <p><strong>${esc(t('bk.done.sum', { p: persons(b.people), d: fmtDate(b.date), t: b.time }))}</strong></p>
+    ${bk.need ? `<p>${ph(t('bk.done.guar', { a: amountText() }))}</p>` : ''}
+    ${bookMessages(b)}
+    <div class="cta-row" style="margin:12px 0 6px"><button class="btn btn-green" type="button" id="bkIcs"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>${esc(t('bk.done.cal'))}</button>
+    <button class="btn btn-ghost" type="button" id="bkNew" style="color:var(--bord)">${esc(t('bk.done.new'))}</button></div>
+    <p class="hint">${esc(t('bk.done.demo'))}</p>`;
+  $('#bookForm').hidden = true; $('#bkDone').hidden = false; $('#bkDone').scrollIntoView({ block: 'nearest' });
+  $('#bkIcs').addEventListener('click', () => downloadICS(b));
+  $('#bkNew').addEventListener('click', () => {
+    $('#bookForm').reset(); $('#bookForm').hidden = false; $('#bkDone').hidden = true; $('#bkStep1').hidden = false; $('#bkStep2').hidden = true;
+    bk.need = false; initBookDate(); renderSteps(0);
+  });
+}
+function downloadICS(b) {
+  const [y, m, d] = b.date.split('-').map(Number), [hh, mm] = b.time.split(':').map(Number);
+  const s = new Date(y, m - 1, d, hh, mm), e = new Date(s.getTime() + CONFIG.booking.durationMinutes * 60000);
+  const f = x => x.getFullYear() + pad(x.getMonth() + 1) + pad(x.getDate()) + 'T' + pad(x.getHours()) + pad(x.getMinutes()) + '00';
+  const z = new Date(), stamp = z.getUTCFullYear() + pad(z.getUTCMonth() + 1) + pad(z.getUTCDate()) + 'T' + pad(z.getUTCHours()) + pad(z.getUTCMinutes()) + '00Z';
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Pani Genuine Food//Preview//IT', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT',
+    'UID:' + Date.now() + '@pani-preview', 'DTSTAMP:' + stamp, 'DTSTART:' + f(s), 'DTEND:' + f(e),
+    'SUMMARY:Prenotazione da Panì', 'LOCATION:Viale America 13\\, 00144 Roma',
+    'DESCRIPTION:' + persons(b.people).replace(',', '') + '. Tel. +39 347 117 2963', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'prenotazione-pani.ics';
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+function initBookDate() {
+  const now = nowRome(); const inp = $('#bDate'); inp.min = dateStr(now.date);
+  let day = now.date;
+  for (let i = 0; i < 8; i++) { day = new Date(now.y, now.mo - 1, now.d + i); if (genSlots(day, CONFIG.booking.slotMinutes, CONFIG.booking.minLeadMinutes, CONFIG.booking.lastSlotBeforeClose).length) break; }
+  inp.value = dateStr(day); renderBookTimes();
+  $('#eDate').min = dateStr(now.date);
+}
+
+/* ---------- eventi privati ---------- */
+$('#evForm').addEventListener('submit', e => {
+  e.preventDefault(); let ok = true;
+  ok = setErr('eType', $('#eType').value ? '' : t('err.req')) && ok;
+  ok = setErr('eDate', $('#eDate').value ? '' : t('err.req')) && ok;
+  const p = Number($('#ePeople').value); ok = setErr('ePeople', p >= 2 ? '' : t('err.people')) && ok;
+  ok = setErr('eName', $('#eName').value.trim() ? '' : t('err.req')) && ok;
+  ok = setErr('ePhone', okPhone($('#ePhone').value) ? '' : t('err.phone')) && ok;
+  ok = setErr('eEmail', okEmail($('#eEmail').value.trim()) ? '' : t('err.email')) && ok;
+  if (!ok) return;
+  const type = $('#eType').selectedOptions[0].textContent;
+  $('#evDone').innerHTML = `<div class="okmark" aria-hidden="true">✓</div><h3>${esc(t('ev.done.t'))}</h3>
+    <p>${ph(t('ev.done.p', { name: $('#eName').value.trim() }))}</p><p><strong>${esc(t('ev.done.sum', { type, d: fmtDate($('#eDate').value), p: persons(p) }))}</strong></p>
+    <p class="hint">${esc(t('ev.done.demo'))}</p><button class="btn btn-ghost" type="button" id="evNew" style="color:var(--bord)">${esc(t('ev.done.new'))}</button>`;
+  $('#evForm').hidden = true; $('#evDone').hidden = false; $('#evDone').scrollIntoView({ block: 'nearest' });
+  $('#evNew').addEventListener('click', () => { $('#evForm').reset(); $('#evForm').hidden = false; $('#evDone').hidden = true; });
+});
+
+/* ---------- buoni regalo ---------- */
+function giftAmount() { const v = $('input[name=gAmt]:checked').value; return v === 'custom' ? Number($('#gCustom').value) : Number(v); }
+function renderVoucher() {
+  const a = giftAmount();
+  $('#vAmt').textContent = a >= 5 ? fmtEUR(a).replace(',00', '').replace('.00', '') : '—';
+  $('#vTo').textContent = $('#gTo').value.trim() || t('gf.ph.name');
+  $('#vFrom').textContent = $('#gFrom').value.trim() || t('gf.ph.name');
+  $('#vMsg').textContent = $('#gMsg').value.trim();
+  $('#gCustomWrap').hidden = $('input[name=gAmt]:checked').value !== 'custom';
+  const ch = $('input[name=gChan]:checked').value;
+  $('#gDestWrap').hidden = ch === 'print';
+  $('#gDestL').textContent = t(ch === 'wa' ? 'gf.dest.wa' : 'gf.dest.email');
+  $('#gDest').type = ch === 'wa' ? 'tel' : 'email';
+}
+$('#gfForm').addEventListener('input', renderVoucher);
+$('#gfForm').addEventListener('change', renderVoucher);
+$('#gfForm').addEventListener('submit', e => {
+  e.preventDefault(); let ok = true; const ch = $('input[name=gChan]:checked').value, a = giftAmount();
+  if ($('input[name=gAmt]:checked').value === 'custom') ok = setErr('gCustom', a >= 5 && a <= 500 ? '' : t('err.amount')) && ok;
+  ok = setErr('gFrom', $('#gFrom').value.trim() ? '' : t('err.req')) && ok;
+  ok = setErr('gTo', $('#gTo').value.trim() ? '' : t('err.req')) && ok;
+  const dest = $('#gDest').value.trim();
+  if (ch === 'email') ok = setErr('gDest', okEmail(dest) ? '' : t('gf.err.dest')) && ok;
+  if (ch === 'wa') ok = setErr('gDest', okPhone(dest) ? '' : t('gf.err.dest')) && ok;
+  if (!ok) return;
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', r4 = () => Array.from({ length: 4 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+  const code = 'PANI-' + r4() + '-' + r4(); $('#vCode').textContent = code;
+  const msg = t('msg.gift', { to: $('#gTo').value.trim(), from: $('#gFrom').value.trim(), a: fmtEUR(a), code, m: $('#gMsg').value.trim() });
+  $('#gfDone').innerHTML = `<div class="okmark" aria-hidden="true">✓</div><h3>${esc(t('gf.done.t'))}</h3><p><strong>${esc(t('gf.done.code'))}: ${code}</strong></p>` +
+    (ch === 'print' ? `<p>${esc(t('gf.done.print'))}</p><button class="btn btn-green" type="button" id="gfPrint">${esc(t('gf.done.printbtn'))}</button>`
+      : `<p class="chan">${esc(t(ch === 'wa' ? 'gf.done.wa' : 'gf.done.email'))}</p><div class="bubble ${ch === 'email' ? 'mail' : ''}">${ph(msg)}</div>`) +
+    `<p class="hint">${esc(t('gf.done.demo'))}</p><button class="btn btn-ghost" type="button" id="gfNew">${esc(t('gf.done.new'))}</button>`;
+  $('#gfDone').hidden = false; $('#gfDone').scrollIntoView({ block: 'nearest' });
+  const pr = $('#gfPrint'); if (pr) pr.addEventListener('click', () => { document.body.classList.add('print-voucher'); window.print(); setTimeout(() => document.body.classList.remove('print-voucher'), 500); });
+  $('#gfNew').addEventListener('click', () => { $('#gfForm').reset(); $('#gfDone').hidden = true; $('#vCode').textContent = 'PANI-XXXX-XXXX'; renderVoucher(); });
+});
+
+/* ---------- lingua ---------- */
+function setWhatsAppLinks() {
+  const href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(t('wa.msg'));
+  $('#dockWa').href = href; $('#ftWa').href = href;
+}
+function applyLang() {
+  document.documentElement.lang = lang;
+  $$('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  $$('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+  $$('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
+  $$('[data-i18n-title]').forEach(el => el.setAttribute('title', t(el.dataset.i18nTitle)));
+  $$('[data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  document.title = t('seo.title');
+  $('meta[name=description]').setAttribute('content', t('seo.desc'));
+  $('meta[property="og:description"]').setAttribute('content', t('seo.og'));
+  $('meta[property="og:title"]').setAttribute('content', t('seo.title').split(' | ')[0]);
+  $('meta[property="og:locale"]').setAttribute('content', lang === 'it' ? 'it_IT' : 'en_GB');
+  setWhatsAppLinks(); renderOpen(); renderHours(); renderAllergenUI(); renderMenu(); renderCatalog(); renderCart(); renderPickup();
+  renderBookTimes(); renderVoucher(); renderSteps(!$('#bkStep2').hidden ? 1 : 0);
+}
+function setLang(l) { lang = l; store.set('pani-lang', l); applyLang(); }
+$$('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+/* ---------- navigazione, cookie, link segnaposto ---------- */
+const nav = $('#nav'), burger = $('#burger');
+burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', String(o)); });
+nav.addEventListener('click', e => { if (e.target.closest('a')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); burger.focus(); } });
+document.addEventListener('click', e => { const a = e.target.closest('[data-placeholder-link]'); if (a) { e.preventDefault(); toast(t('toast.link')); } });
+const ck = $('#cookie');
+$$('[data-ck]').forEach(b => b.addEventListener('click', () => { store.set('pani-cookie', b.dataset.ck); ck.classList.remove('on'); }));
+$('#cookieReopen').addEventListener('click', e => { e.preventDefault(); ck.classList.add('on'); });
+
+/* ---------- avvio ---------- */
+(function init() {
+  const saved = store.get('pani-lang'), q = params.get('lang');
+  lang = (q === 'en' || q === 'it') ? q : (saved === 'en' || saved === 'it') ? saved : 'it';
+  if (CONFIG.christmasBanner || params.has('natale')) $('#xmas').classList.add('on');
+  menuJSONLD(); initBookDate(); applyLang();
+  if (!store.get('pani-cookie')) setTimeout(() => ck.classList.add('on'), 700);
+  setInterval(renderOpen, 60000);
+})();
+</script>
+</body>
+</html>
